@@ -1,12 +1,28 @@
 /**
  * iReal-style chord grid: four bars per row, section labels, repeats and endings,
  * with optional Roman numerals and the ii–V–I "x-ray" brackets.
+ *
+ * Two tap targets per bar: the chord symbol itself opens that chord (voicings, spelling,
+ * function), while anywhere else in the bar sets a loop point.
  */
 import { useMemo } from 'react';
 import type { Tune } from '../theory/tune';
 import { chartBars, chartChords } from '../theory/tune';
 import { analyzeProgression, parseKey, formatNumeral, type Cadence } from '../theory/keys';
-import { displaySymbol } from '../theory/chords';
+import { displaySymbol, type Chord } from '../theory/chords';
+
+/** A chord the user tapped, with everything the analysis already knows about it. */
+export interface ChordSelection {
+  chartId: number;
+  slot: number;
+  chord: Chord;
+  /** Roman numeral in the tune's key, e.g. "iiø7" */
+  numeral?: string;
+  /** secondary-dominant label, e.g. "V7/ii" */
+  functionLabel?: string;
+  /** cadence this chord belongs to, e.g. "minor ii–V–i" */
+  cadence?: string;
+}
 
 interface Props {
   tune: Tune;
@@ -16,7 +32,9 @@ interface Props {
   currentSlot: number;
   loop: { startChartId: number; endChartId: number } | null;
   loopPending: number | null;
+  selected: ChordSelection | null;
   onBarTap: (chartId: number) => void;
+  onChordTap: (selection: ChordSelection) => void;
 }
 
 export const CADENCE_LEGEND: { type: Cadence['type']; label: string }[] = [
@@ -26,7 +44,7 @@ export const CADENCE_LEGEND: { type: Cadence['type']; label: string }[] = [
   { type: 'secondary', label: 'secondary dominant' },
 ];
 
-export function ChartGrid({ tune, showRoman, showXray, currentChartId, currentSlot, loop, loopPending, onBarTap }: Props) {
+export function ChartGrid({ tune, showRoman, showXray, currentChartId, currentSlot, loop, loopPending, selected, onBarTap, onChordTap }: Props) {
   const bars = useMemo(() => chartBars(tune), [tune]);
   const analysis = useMemo(() => {
     const chords = chartChords(tune);
@@ -81,12 +99,22 @@ export function ChartGrid({ tune, showRoman, showXray, currentChartId, currentSl
                     {bar.chords.map((c, ci) => {
                       const a = info[ci];
                       const sounding = bar.id === currentChartId && ci === currentSlot;
+                      const isSelected = selected?.chartId === bar.id && selected.slot === ci;
                       const cad = showXray ? a?.cad : undefined;
                       return (
-                        <div className="bar-chord" key={ci} style={{ flexGrow: c.beats }}>
-                          <span className={'sym chord-symbol' + (showRoman ? ' roman' : '') + (sounding ? ' sounding' : '')}>
+                        <div className={'bar-chord' + (bar.chords.length > 1 ? ' multi' : '')} key={ci} style={{ flexGrow: c.beats }}>
+                          <button
+                            type="button"
+                            className={'sym chord-symbol' + (showRoman ? ' roman' : '') + (sounding ? ' sounding' : '') + (isSelected ? ' selected' : '')}
+                            title={`Show ${c.symbol}`}
+                            aria-label={`Show ${c.symbol}`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onChordTap({ chartId: bar.id, slot: ci, chord: c.chord, numeral: a?.numeral, functionLabel: a?.fn, cadence: a?.cad?.cadence.label });
+                            }}
+                          >
                             {showRoman ? formatNumeral(a?.numeral ?? '') : displaySymbol(c.chord)}
-                          </span>
+                          </button>
                           {showRoman && a?.fn && <span className="fn">{formatNumeral(a.fn)}</span>}
                           {showXray && (
                             <span

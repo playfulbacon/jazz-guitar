@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { QUALITIES, parseChord, displaySymbol, chordSymbol, chordTones } from '../theory/chords';
 import { CHROMATIC_ROOTS, parseNote, noteName } from '../theory/notes';
 import { realizeVoicing, voicingMidiNotes, type VoicingLevel } from '../theory/voicings';
@@ -26,8 +27,16 @@ const LEVELS: { id: VoicingLevel | 'all'; label: string; blurb: string }[] = [
 type Card = { title: string; formula: string; sound: string; function: string; listen: string };
 
 export function ChordsPage() {
-  const [quality, setQuality] = useState('maj7');
-  const [rootName, setRootName] = useState('C');
+  // The chart player links here with ?root=Bb&q=maj7 to open a specific chord.
+  const [params] = useSearchParams();
+  const paramQuality = params.get('q');
+  const paramRoot = params.get('root');
+  const [quality, setQuality] = useState(() => (paramQuality && QUALITIES[paramQuality] ? paramQuality : 'maj7'));
+  const [rootName, setRootName] = useState(() => (paramRoot && CHROMATIC_ROOTS.includes(paramRoot) ? paramRoot : 'C'));
+  useEffect(() => {
+    if (paramQuality && QUALITIES[paramQuality]) setQuality(paramQuality);
+    if (paramRoot && CHROMATIC_ROOTS.includes(paramRoot)) setRootName(paramRoot);
+  }, [paramQuality, paramRoot]);
   const [level, setLevel] = useState<VoicingLevel | 'all'>('all');
   const { labelMode, set, compInstrument } = useSettings();
   const root = useMemo(() => parseNote(rootName), [rootName]);

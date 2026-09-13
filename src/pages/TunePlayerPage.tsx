@@ -8,7 +8,8 @@ import { engine } from '../audio/engine';
 import { usePlanOwner } from '../audio/usePlayback';
 import { usePlayer } from '../store/player';
 import { useSettings } from '../store/settings';
-import { ChartGrid } from '../components/ChartGrid';
+import { ChartGrid, type ChordSelection } from '../components/ChartGrid';
+import { ChordPanel } from '../components/ChordPanel';
 import { FretboardStrip } from '../components/FretboardStrip';
 import { Transport } from '../components/Transport';
 import { Mixer } from '../components/Mixer';
@@ -52,6 +53,23 @@ function Player({ tuneId }: { tuneId: string }) {
   const { toggle, playing } = usePlanOwner(`tune:${tuneId}`, plan, tempo);
   const { position, loading, loop, loopPending, set } = usePlayer();
   const [showMixer, setShowMixer] = useState(false);
+  const [selected, setSelected] = useState<ChordSelection | null>(null);
+  const [ring, setRing] = useState<number[]>([]);
+
+  // Tapping a chord pins the spotlight to it and opens the inspector; tapping it again closes.
+  const onChordTap = useCallback((sel: ChordSelection) => {
+    setSelected((prev) => (prev && prev.chartId === sel.chartId && prev.slot === sel.slot ? null : sel));
+    setRing([]);
+  }, []);
+
+  const auditionVoicing = useCallback(
+    (midis: number[]) => {
+      setRing(midis);
+      void engine.audition(midis, settings.compInstrument);
+      window.setTimeout(() => setRing((r) => (r === midis ? [] : r)), 1800);
+    },
+    [settings.compInstrument],
+  );
 
   // loop selection: tap two chart bars
   const onBarTap = useCallback(
@@ -90,11 +108,14 @@ function Player({ tuneId }: { tuneId: string }) {
       if (e.code === 'Space') {
         e.preventDefault();
         toggle();
-      } else if (e.key === 'Escape') clearLoop();
+      } else if (e.key === 'Escape') {
+        if (selected) setSelected(null);
+        else clearLoop();
+      }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [toggle, clearLoop]);
+  }, [toggle, clearLoop, selected]);
 
   // auto-scroll the current bar into view
   useEffect(() => {
@@ -160,18 +181,34 @@ function Player({ tuneId }: { tuneId: string }) {
             currentSlot={position?.slot ?? 0}
             loop={loop ? { startChartId: loop.startChartId, endChartId: loop.endChartId } : null}
             loopPending={loopPending}
+            selected={selected}
             onBarTap={onBarTap}
+            onChordTap={onChordTap}
           />
-          {settings.showSpotlight && <FretboardStrip chord={currentChord ?? cells[0]?.chords[0]?.chord ?? null} labelMode={settings.labelMode} />}
+          <p className="chart-hint small dim">
+            Tap a chord to see its voicings. Tap two bars anywhere else to set a loop.
+          </p>
+          {settings.showSpotlight && (
+            <FretboardStrip
+              chord={selected?.chord ?? currentChord ?? cells[0]?.chords[0]?.chord ?? null}
+              labelMode={settings.labelMode}
+              ring={ring}
+              pinned={!!selected}
+              onUnpin={() => setSelected(null)}
+            />
+          )}
           {tune.analysis?.notes && (
             <p className="muted small" style={{ marginTop: '1rem' }}>
               <b>Analysis:</b> {tune.analysis.notes}
             </p>
           )}
         </div>
-        {showMixer && (
+        {(selected || showMixer) && (
           <aside className="player-side">
-            <Mixer />
+            {selected && (
+              <ChordPanel selection={selected} labelMode={settings.labelMode} onAudition={auditionVoicing} onClose={() => setSelected(null)} />
+            )}
+            {showMixer && <Mixer />}
           </aside>
         )}
       </div>
@@ -186,7 +223,10 @@ function Player({ tuneId }: { tuneId: string }) {
         countIn={settings.countIn}
         onCountIn={(v) => settings.set({ countIn: v })}
         transpose={transpose}
-        onTranspose={(s) => settings.setTuneTranspose(tuneId, s)}
+        onTranspose={(s) => {
+          setSelected(null);
+          settings.setTuneTranspose(tuneId, s);
+        }}
         keyName={key}
         loopLabel={loopLabel}
         onClearLoop={clearLoop}

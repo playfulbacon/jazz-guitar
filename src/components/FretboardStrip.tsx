@@ -15,9 +15,12 @@ interface Props {
   frets?: number;
   /** highlight these midi notes (e.g. the voicing being played) with a ring */
   ring?: number[];
+  /** true when the strip is showing a chord the user picked rather than the sounding one */
+  pinned?: boolean;
+  onUnpin?: () => void;
 }
 
-export function FretboardStrip({ chord, labelMode = 'interval', frets = 15, ring }: Props) {
+export function FretboardStrip({ chord, labelMode = 'interval', frets = 15, ring, pinned, onUnpin }: Props) {
   const tones = useMemo(() => (chord ? chordToneMap(chord) : null), [chord]);
   const width = 1000;
   const leftPad = 34;
@@ -33,6 +36,11 @@ export function FretboardStrip({ chord, labelMode = 'interval', frets = 15, ring
       <div className="spotlight-head">
         <span className="label">Chord tones</span>
         <span className="now">{chord ? displaySymbol(chord) : '—'}</span>
+        {pinned && (
+          <button className="btn btn-sm" onClick={onUnpin} title="Follow playback again">
+            pinned ×
+          </button>
+        )}
         {chord && (
           <span className="muted small">
             {chord.quality.intervals.join(' · ')}

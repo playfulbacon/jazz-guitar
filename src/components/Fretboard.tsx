@@ -14,8 +14,9 @@ interface Props {
 }
 
 export function Fretboard({ voicing, labelMode = 'interval', width = 150, frets = 5 }: Props) {
-  const stringGap = width / 7;
-  const left = stringGap;
+  // 1.6 gaps of gutter on the left so a two-digit fret number never collides with the diagram.
+  const stringGap = width / 7.6;
+  const left = stringGap * 1.6;
   const top = 34;
   const fretGap = stringGap * 1.35;
   const height = top + fretGap * frets + 16;
@@ -33,7 +34,7 @@ export function Fretboard({ voicing, labelMode = 'interval', width = 150, frets 
         <line key={f} x1={left} y1={top + f * fretGap} x2={left + 5 * stringGap} y2={top + f * fretGap} stroke={f === 0 && showNut ? 'var(--text)' : 'var(--line-strong)'} strokeWidth={f === 0 && showNut ? 4 : 1.2} />
       ))}
       {!showNut && (
-        <text x={left - 8} y={top + fretGap * 0.6} fontSize={11} fill="var(--text-muted)" textAnchor="end" fontWeight={600}>
+        <text x={left - 7} y={top + fretGap * 0.6} fontSize={11} fill="var(--text-muted)" textAnchor="end" fontWeight={600}>
           {startFret}
         </text>
       )}
