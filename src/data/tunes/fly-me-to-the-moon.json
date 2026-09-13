@@ -1,0 +1,69 @@
+{
+  "id": "fly-me-to-the-moon",
+  "title": "Fly Me to the Moon",
+  "composer": "Bart Howard",
+  "defaultKey": "C",
+  "form": "ABAC",
+  "style": "swing",
+  "defaultTempo": 130,
+  "sections": [
+    { "label": "A", "bars": [
+      { "chords": [{ "symbol": "Am7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 4 }] },
+      { "chords": [{ "symbol": "E7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Am7", "beats": 2 }, { "symbol": "A7", "beats": 2 }] }
+    ]},
+    { "label": "B", "bars": [
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Am7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 2 }, { "symbol": "E7", "beats": 2 }] }
+    ]},
+    { "label": "A", "bars": [
+      { "chords": [{ "symbol": "Am7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 4 }] },
+      { "chords": [{ "symbol": "E7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Am7", "beats": 2 }, { "symbol": "A7", "beats": 2 }] }
+    ]},
+    { "label": "C", "bars": [
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Em7", "beats": 4 }] },
+      { "chords": [{ "symbol": "A7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 2 }, { "symbol": "E7", "beats": 2 }] }
+    ]}
+  ],
+  "analysis": {
+    "keyPairs": ["C", "Am"],
+    "notes": "Almost entirely diatonic to C major and its relative minor. The first six bars walk down the circle of fifths (vi–ii–V–I–IV–viiø), which makes it the ideal first tune for hearing root motion in fourths. The Bm7b5–E7 pairs are minor ii–V–is into Am, and the A7 at the end of each A section is V7/ii setting up the Dm7 that opens the next phrase."
+  },
+  "learning": {
+    "phase": 2,
+    "order": 1,
+    "why": "The friendliest first standard: one key, root motion almost entirely in fourths, and a form (ABAC) that you can memorise in a sitting. Everything you learn here transfers to hundreds of other tunes.",
+    "concepts": ["Circle-of-fifths root motion", "Major ii–V–I (Dm7–G7–Cmaj7)", "Minor ii–V–i (Bm7b5–E7–Am7)", "Secondary dominant V7/ii (A7)"],
+    "drills": [
+      "Comp shells only, one chord per bar, at 100 BPM for ten choruses without looking.",
+      "Sing or play just the 3rds and 7ths through the form with the trio at 90 BPM.",
+      "Solo using only chord tones, then only guide tones, then add approach notes.",
+      "Turn on the Roman numeral view and say each numeral aloud as it passes."
+    ],
+    "listen": ["Frank Sinatra with Count Basie — It Might as Well Be Swing (1964)", "Joe Harnell — Fly Me to the Moon Bossa Nova (1962)"],
+    "milestones": ["Know the form and changes from memory", "Comp shells through the form without looking", "Comp drop-2 voicings with the trio", "Play a chord-tone solo over the whole form", "Play the melody from memory (learn it by ear from a recording)"]
+  }
+}

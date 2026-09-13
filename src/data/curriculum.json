@@ -1,0 +1,529 @@
+{
+  "phases": [
+    {
+      "id": "harmony",
+      "title": "Harmony foundations",
+      "summary": "Learn how jazz chords are built, how they move, and why the ii–V–I is everywhere. The goal is to look at any chart and hear the function of each chord before you play it.",
+      "lessons": [
+        {
+          "id": "chord-construction",
+          "title": "Building chords from the scale",
+          "body": [
+            "Every chord you will meet on a jazz chart is a stack of thirds taken from a scale. Stack four notes in thirds on each degree of the major scale and you get the seven diatonic seventh chords: major 7 on I and IV, minor 7 on ii, iii and vi, dominant 7 on V, and minor 7 flat 5 (half-diminished) on vii. That single pattern accounts for most of what you will play in the first year.",
+            "The quality of a chord is decided by two intervals: the third (major or minor) and the seventh (major or minor). A major 7 has a major third and a major seventh. A dominant 7 has a major third and a minor seventh. A minor 7 has a minor third and a minor seventh. A minor 7 flat 5 lowers the fifth as well. Learn to hear these four qualities as sounds, not just as symbols.",
+            "Extensions (9, 11, 13) and alterations (flat 9, sharp 9, sharp 11, flat 13) are colour added on top of the four basic qualities. They do not change the chord's job. When a chart says G13 or G7b9, the chord is still a dominant 7 and still wants to resolve to C. You can play the plain 7th chord and be correct; you can add the colour when your ear asks for it.",
+            "Use the Chord Library to see and hear each quality in several positions. Say the quality out loud as you play it. As a fingerstyle player you already have the hands for this; the work is in the ear."
+          ],
+          "bullets": [
+            "Diatonic seventh chords in a major key: Imaj7, ii-7, iii-7, IVmaj7, V7, vi-7, vii-7b5.",
+            "The third and the seventh decide chord quality; everything else is colour.",
+            "Extensions do not change a chord's function, only its flavour.",
+            "Name the quality every time you play a chord until it is automatic."
+          ],
+          "drills": [
+            "Play the seven diatonic seventh chords in C major up the neck, one chord per bar, at 60 bpm with the metronome. Five minutes. Repeat in F and Bb.",
+            "Pick one root (say G). Play Gmaj7, G7, G-7, G-7b5 in the same position, one after another, and sing the third and seventh of each. Three minutes daily.",
+            "Open the Chord Library, choose a random quality, and find it on three different string sets without looking at the diagram first."
+          ],
+          "tunes": ["autumn-leaves"]
+        },
+        {
+          "id": "shell-voicings",
+          "title": "Shell voicings: root, 3rd, 7th",
+          "body": [
+            "A shell voicing is the chord stripped to its essentials: the root, the third and the seventh. Three notes tell the listener the root and the quality, and they sit under the fingers on the bass strings so the hand stays relaxed. Most working jazz guitarists learned harmony this way, and many still comp with shells when the band is loud and the room is small.",
+            "There are two shapes to learn for each quality: one with the root on the sixth string and one with the root on the fifth. With the root on the sixth string, play the seventh on the fourth string and the third on the third string. With the root on the fifth string, play the third on the fourth string and the seventh on the third string. Change the third and seventh by a fret and you move between major 7, dominant 7 and minor 7 without moving the root.",
+            "Shells force you to hear the guide tones, and they leave the top two strings free for melody or extensions later. Think of them as the skeleton that every fuller voicing hangs from. Once you have them, drop-2 voicings and extended chords are additions, not new material.",
+            "Play a whole tune with nothing but shells. It will sound sparse, and that is the point: you are learning to hear the changes with the minimum of notes."
+          ],
+          "bullets": [
+            "Shell = root, 3rd, 7th. The fifth is optional in almost every jazz chord.",
+            "Learn each quality with the root on the 6th string and on the 5th string.",
+            "Alternate string sets so the hand moves as little as possible between chords.",
+            "Shells are your fallback when a chart is hard, the tempo is fast or the room is loud."
+          ],
+          "drills": [
+            "Play Autumn Leaves with shells only, alternating 6th-string and 5th-string roots so each chord change is within two frets. 80 bpm, two beats per chord, ten minutes.",
+            "Cycle of fourths in dominant 7 shells: C7 F7 Bb7 Eb7 and so on, one chord per bar at 70 bpm, staying between the 3rd and 8th frets. Three minutes.",
+            "Load Fly Me to the Moon in the Chart Player and comp with shells, whole notes only, until you can do it without looking at the chart."
+          ],
+          "tunes": ["autumn-leaves", "fly-me-to-the-moon"]
+        },
+        {
+          "id": "guide-tones",
+          "title": "Guide tones and voice leading",
+          "body": [
+            "The third and the seventh of each chord are the guide tones. They carry the quality of the chord, and when one chord moves to the next they move by a step or not at all. In a ii–V–I in C, the seventh of D-7 (C) drops to the third of G7 (B), which stays put as the seventh of Cmaj7. That smooth motion is the sound of jazz harmony, and it is why the changes feel inevitable when played well.",
+            "Practise the guide tones alone, as a two-note line, before you play the full chords. On guitar this means two adjacent strings, usually the fourth and third or the third and second. Move through a tune and let the two notes lead you to the closest next pair rather than jumping to a familiar shape.",
+            "This is the single most useful harmony habit you will build. It makes comping sound connected, it tells you which notes to aim for when you improvise, and it lets you accompany a singer with a whisper of harmony instead of a wall of it. The chord-tone spotlight in the Chart Player highlights the 3rd and 7th of each chord so you can check your ear against the fretboard.",
+            "Once the two-note guide tone line is solid, add the root underneath and you have a shell. Add a note on top and you have a four-note voicing that already leads well."
+          ],
+          "bullets": [
+            "Guide tones are the 3rd and 7th; they define quality and lead the ear from chord to chord.",
+            "Between chords a fourth apart, one guide tone stays and the other moves down a half step.",
+            "Play the guide-tone line alone before you play full chords on any new tune.",
+            "Voice leading means choosing the closest next voicing, not the most familiar one."
+          ],
+          "drills": [
+            "Play only 3rds and 7ths through Fly Me to the Moon on the 4th and 3rd strings, half notes, 70 bpm. Then repeat on the 3rd and 2nd strings. Five minutes each.",
+            "ii–V–I gym: run major ii–V–Is through all twelve keys with guide tones only, one bar per chord at 60 bpm. Do not move more than one fret between chords.",
+            "Sing the guide-tone line while playing the roots on the bass strings, slowly, through the first eight bars of All of Me."
+          ],
+          "tunes": ["fly-me-to-the-moon", "all-of-me"]
+        },
+        {
+          "id": "ii-v-i-major-minor",
+          "title": "The ii–V–I in major and minor",
+          "body": [
+            "The ii–V–I is the sentence of jazz harmony: a tension (ii), a stronger tension (V) and a release (I). In major it is ii-7, V7, Imaj7. Learn it in a handful of positions so that when you see the progression, and you will see it constantly, your hands and ears already know what is coming.",
+            "In minor the same sentence uses darker colours: ii-7b5, V7b9 (or V7 with an altered upper structure), i-6 or i-7. The flat five on the ii chord and the flat nine on the V both come from the harmonic minor scale, which is why the minor ii–V–i sounds tighter and more dramatic. On guitar the diminished shape a half step above the V root gives you a ready-made V7b9 without the root.",
+            "Autumn Leaves is the ideal first study because it alternates a major ii–V–I and its relative minor ii–V–i in the same key signature. Blue Bossa does the minor version and then modulates to a major ii–V–I a half step down. Between those two tunes you meet most of what this lesson teaches.",
+            "Use the ii–V–I gym to drill the progression in every key with shells, then guide tones, then fuller voicings. Keys you avoid are keys you will meet on the bandstand."
+          ],
+          "bullets": [
+            "Major: ii-7 V7 Imaj7. Minor: ii-7b5 V7b9 i-6 (or i-7).",
+            "The minor ii–V borrows its b5 and b9 from harmonic minor.",
+            "Learn each ii–V–I with the ii chord rooted on the 6th string and again on the 5th.",
+            "Relative major and minor ii–V–Is share a key signature; Autumn Leaves teaches both.",
+            "A diminished 7 shape a half step above the V root is a V7b9 in disguise."
+          ],
+          "drills": [
+            "ii–V–I gym: major ii–V–I in all twelve keys, shells, one bar per chord, 60 bpm. Move around the cycle of fourths. Ten minutes.",
+            "Same routine with the minor ii–V–i, using the diminished shape for the V7b9. Ten minutes.",
+            "Comp Autumn Leaves at 100 bpm with the Chart Player, saying major or minor out loud at the start of each ii–V.",
+            "Comp Blue Bossa at 110 bpm and feel the half-step drop between the minor and major ii–V sections."
+          ],
+          "tunes": ["autumn-leaves", "blue-bossa"]
+        },
+        {
+          "id": "drop-2-voicings",
+          "title": "Drop-2 voicings",
+          "body": [
+            "A drop-2 voicing takes a close four-note chord and drops the second note from the top down an octave. The result spans four adjacent strings, sits comfortably under the hand and gives you the full, rich chord sound you hear on Wes Montgomery and Joe Pass records. Every four-note quality has four inversions, and each inversion lives on three string sets (6-5-4-3, 5-4-3-2, 4-3-2-1).",
+            "That sounds like a lot of shapes, and it is, so learn them by need rather than by catalogue. Start with the 5-4-3-2 string set, which balances warmth and clarity. Learn the four inversions of major 7, dominant 7, minor 7 and minor 7 flat 5, and immediately use them on a tune. The Chord Library shows each inversion; the job is to connect them so the top note moves as little as possible.",
+            "Drop-2 shapes are also your entry to chord melody. Because the melody sits on the top string of the voicing, choosing the inversion that puts the tune's note on top harmonises the melody automatically. That is the technique behind most solo-guitar arrangements, and as a fingerstyle player you will find the physical side easy.",
+            "Do not abandon shells. Drop-2 is for when you want the full sound; shells are for when the band needs space. Being able to switch between them is a skill in itself."
+          ],
+          "bullets": [
+            "Drop-2: take a close voicing, drop the second note from the top an octave.",
+            "Four inversions per quality, three string sets; start with strings 5-4-3-2.",
+            "Connect inversions so the top voice moves by step; that is what makes comping sound musical.",
+            "The inversion with the melody on top is the basis of chord melody playing."
+          ],
+          "drills": [
+            "Play the four inversions of Cmaj7 ascending on strings 5-4-3-2, then C7, C-7, C-7b5. Quarter notes at 60 bpm. Five minutes, then move the root to F.",
+            "Comp Satin Doll using drop-2 on strings 5-4-3-2 only, choosing inversions so the top note never jumps more than a third. 90 bpm, ten minutes.",
+            "Take the first four bars of All of Me and harmonise the melody by picking the drop-2 inversion with the melody on top."
+          ],
+          "tunes": ["satin-doll", "all-of-me"]
+        },
+        {
+          "id": "roman-numerals-and-substitution",
+          "title": "Roman numerals and substitution basics",
+          "body": [
+            "Roman numerals describe a chord by its role in the key rather than its letter name. D-7 G7 Cmaj7 in C and G-7 C7 Fmaj7 in F are both ii–V–I. Once you think this way, a tune is not thirty-two chords to memorise but a few patterns in a few keys, and a tune in a new key is the same tune. The Roman numeral view in the Chart Player lets you flip any chart into this language.",
+            "Most standards are made of a small set of moves: the ii–V–I, the I–vi–ii–V turnaround, the secondary dominant (any dominant 7 that resolves down a fourth to a chord other than I, such as the A7 that pulls to D-7 in All of Me), and the borrowed chord from the parallel minor (the iv-6 or bVII7 that gives a warm shadow in a major key). Learn to spot them and the chart shrinks.",
+            "Substitution starts from one principle: a chord can be replaced by another chord that shares its guide tones. The tritone substitution swaps a V7 for the dominant 7 a tritone away (G7 becomes Db7) because both contain the same third and seventh, just swapped. It turns the root motion into a chromatic walk down. A passing diminished chord fills the gap between two diatonic chords a whole step apart. A secondary ii chord can be placed in front of any dominant to make a longer ii–V.",
+            "Use substitutions sparingly at first and only where they do not fight the melody or the bass player. The aim is not to be clever; it is to know what you are hearing on records and to have a few tasteful options when you comp."
+          ],
+          "bullets": [
+            "Roman numerals turn letter names into function; a ii–V–I is the same in every key.",
+            "Core moves: ii–V–I, I–vi–ii–V turnaround, secondary dominants, borrowed minor iv.",
+            "Tritone sub: replace V7 with the dominant 7 a tritone away; the guide tones are shared.",
+            "Passing diminished chords connect diatonic chords a whole step apart.",
+            "A substitution must agree with the melody and the bass, or leave it out."
+          ],
+          "drills": [
+            "Switch the Chart Player to Roman numeral view on Fly Me to the Moon and say each numeral aloud while comping at 90 bpm. Then transpose the tune to Bb and Eb using the numerals only.",
+            "Play the turnaround I–vi–ii–V in C, then replace the V with its tritone sub, then replace the vi with a VI7 secondary dominant. One bar per chord, 70 bpm, all twelve keys over a week.",
+            "Find every secondary dominant in All of Me and Take the A Train. Play each one with a ii chord in front of it and decide by ear whether it improves the passage."
+          ],
+          "tunes": ["fly-me-to-the-moon", "all-of-me", "take-the-a-train"]
+        }
+      ]
+    },
+    {
+      "id": "repertoire",
+      "title": "Learning standards",
+      "summary": "Ten tunes, learned properly: form, key centres, changes from memory, and comping that holds together without a chart. Each tune is chosen to teach something the previous one did not.",
+      "lessons": [
+        {
+          "id": "reading-the-form",
+          "title": "Reading a standard: form and key centres",
+          "body": [
+            "Before you learn a single chord, learn the shape of the tune. Most standards are 32 bars in AABA or ABAC form, or 12-bar blues, or a 16-bar form played twice. Count the bars, mark where the sections start and notice which sections repeat. A tune you can see as four eight-bar phrases is far easier to memorise and to solo over than a tune you see as a list of chords.",
+            "Next, find the key centres. Go through the chart and circle each ii–V–I; the I chords tell you where the tune lives. Fly Me to the Moon moves in a circle within one key. Autumn Leaves lives in a major key and its relative minor. There Will Never Be Another You visits several keys inside 32 bars. Knowing the key centres tells you which scales and arpeggios to reach for and which chords are just passing traffic.",
+            "Finally, look at the melody's relationship to the changes even if you are not going to play it: where does it sit on a chord tone, where does it hold a tension, where does the tune breathe. This is why you should listen to a recording several times before you touch the guitar.",
+            "Write your analysis on a single sheet: form, key centres, the unusual bars. That sheet is worth more than the chart."
+          ],
+          "bullets": [
+            "Identify the form first: AABA, ABAC, 12-bar blues, 16-bar form.",
+            "Circle every ii–V–I; the I chords are the key centres.",
+            "Note the bars that do not fit the pattern; those are the ones you will need to practise.",
+            "Listen to two or three recordings before you play anything."
+          ],
+          "drills": [
+            "Take Fly Me to the Moon, write out the form and key centres on one sheet without the chart in front of you, then check it against the Roman numeral view.",
+            "Listen to three recordings of Autumn Leaves at different tempos and clap the form, calling out A or B at the top of each section.",
+            "Do the same sheet for There Will Never Be Another You and count how many keys it visits."
+          ],
+          "tunes": ["fly-me-to-the-moon", "autumn-leaves", "there-will-never-be-another-you"]
+        },
+        {
+          "id": "memorising-changes",
+          "title": "Memorising changes for good",
+          "body": [
+            "Memorising by rote works until you are nervous, and then it fails. Memorise by function instead. Learn the tune as Roman numerals in key centres, so that the bridge of a tune is 'ii–V to the IV, then ii–V back home' rather than eight chord names. Then attach the specific voicings and bass notes to that map.",
+            "Practise recall away from the guitar. Say the changes out loud while walking, four beats per bar, with a metronome app if you like. If you can recite the tune at tempo you can play it; if you cannot, the guitar was covering for you.",
+            "Then test yourself against the Chart Player with the chart hidden. Play through the form at a slow tempo, and when you stumble, do not restart from the top. Stop, look, and repeat the bar you missed and the bar before it ten times. The bars you get wrong are always the same bars, and they are the only ones that need work.",
+            "Learn each tune in its standard key first, then in one other key using the numerals. Transposing once is the proof that you learned the function and not the shapes."
+          ],
+          "bullets": [
+            "Memorise as Roman numerals in key centres, not as letter names.",
+            "Recite the changes at tempo away from the instrument.",
+            "Fix the specific bars you miss; do not keep restarting from the top.",
+            "Transpose each tune to one new key as a test."
+          ],
+          "drills": [
+            "Recite Blue Bossa's changes aloud with the metronome at 120 bpm, four beats per chord, no guitar, until you can do it three times without error.",
+            "Play Summertime from memory at 70 bpm with the chart hidden; note every bar you miss and drill those bars for five minutes.",
+            "Transpose Fly Me to the Moon to Bb from the numerals and comp it at 80 bpm."
+          ],
+          "tunes": ["blue-bossa", "summertime", "fly-me-to-the-moon"]
+        },
+        {
+          "id": "comping-from-memory",
+          "title": "Comping from memory",
+          "body": [
+            "Comping means accompanying. It is what you will do for most of any jazz gig, and it is where guitarists new to jazz are most often weak, because we tend to practise soloing and treat the chords as a chore. Good comping is rhythmic first and harmonic second: a clear pulse, a few well-placed chords, and space for the soloist.",
+            "Start with the Charleston rhythm (a chord on beat one and the and of two) and the Freddie Green four-to-the-bar stroke. Alternate them. Then start displacing: anticipate a chord change by an eighth note, leave a bar empty, hit a chord short on beat four. Keep the voicings small, three or four notes in the middle of the neck, so the bass player and pianist have room.",
+            "Once you can play the changes without the chart, comping becomes listening. Put a recording on and comp along, matching the energy of the band and staying out of the way of the soloist. Then play the same tune with just the metronome on beats two and four and try to make it swing on your own.",
+            "The metronome in the app can click on two and four only. Use that setting for everything in this phase."
+          ],
+          "bullets": [
+            "Comping is rhythm first: a clear pulse and space for the soloist.",
+            "Start with the Charleston figure and four-to-the-bar; then displace and leave gaps.",
+            "Keep voicings to three or four notes in the middle of the neck.",
+            "Practise with the metronome on two and four only."
+          ],
+          "drills": [
+            "Comp F blues with shells, Charleston rhythm, metronome on two and four at 120 bpm, ten choruses without stopping.",
+            "Comp Satin Doll four-to-the-bar at 130 bpm for five minutes, then switch to Charleston and anticipations for five minutes.",
+            "Put on a recording of All of Me and comp along for the whole track, matching the band's dynamics."
+          ],
+          "tunes": ["f-blues", "satin-doll", "all-of-me"]
+        },
+        {
+          "id": "first-five-tunes",
+          "title": "The first five tunes and why",
+          "body": [
+            "Learn the F blues first. Twelve bars, three key chords, and a form every jazz musician on earth knows. It teaches the I–IV–V skeleton, the quick change in bar two, the ii–V in bars nine and ten and the turnaround. Everything you later learn about blues language, comping and trading fours lives here.",
+            "Autumn Leaves is second because it is a ii–V–I workbook in one key signature: the major ii–V–I and its relative minor ii–V–i, in a clean 32-bar form. Fly Me to the Moon is third: a circle of fourths through a key, more ii–V–Is, and the first tune where you really need to memorise the whole form rather than a pattern.",
+            "Blue Bossa is fourth. It is short, it introduces a bossa feel, and it moves from a minor key to a major key a half step below and back. Summertime is fifth: a 16-bar minor tune with few chords that gives you space to work on sound, phrasing and blues vocabulary in a minor key.",
+            "By the end of these five you have played the blues form, both ii–V–Is, a modulation and a bossa groove. That is a foundation for almost any jam session."
+          ],
+          "bullets": [
+            "F blues: the form everyone knows; teaches the blues skeleton and the turnaround.",
+            "Autumn Leaves: major and minor ii–V–I in one tune.",
+            "Fly Me to the Moon: the circle of fourths and a full 32-bar form from memory.",
+            "Blue Bossa: minor key, bossa feel, half-step modulation.",
+            "Summertime: minor, few chords, room to work on phrasing."
+          ],
+          "drills": [
+            "Comp each of the five tunes from memory in the Chart Player, one full chorus each, at the app's default tempo. Do this as a daily warm-up for two weeks.",
+            "Pick one tune per day and comp it for ten minutes with the chart hidden and the metronome on two and four.",
+            "Play the changes of Autumn Leaves and Blue Bossa as bass-note-only lines, one note per beat, to hear the root motion."
+          ],
+          "tunes": ["f-blues", "autumn-leaves", "fly-me-to-the-moon"]
+        },
+        {
+          "id": "next-five-tunes",
+          "title": "The next five tunes and why",
+          "body": [
+            "Satin Doll is sixth. It is built from ii–V pairs that do not resolve where you expect, so it teaches you to hear a ii–V as a unit and to move it around. It is also a lesson in Ellington voicings and in leaving space. All of Me is seventh: an ABAC form full of secondary dominants, each pulling to a minor chord, so it is the tune for hearing dominant-to-minor resolution.",
+            "Take the A Train is eighth. It is AABA, and the second chord is a II7 with a sharp 11 sound, which is the first time a chart asks you for a specific colour rather than a plain quality. The bridge moves to the IV and back. It is also a tune you must know at a fast tempo.",
+            "It's Only a Paper Moon is ninth: a bright, swinging AABA tune whose A section leans on the I–vi–ii–V turnaround, so it becomes the place to practise turnaround substitutions and a Freddie Green four-feel. There Will Never Be Another You is tenth and hardest: 32 bars that move through several key centres with ii–V–Is in each. If you can comp and solo on this one from memory, you can learn any standard on your own.",
+            "Ten tunes is a modest repertoire, but ten tunes learned deeply are worth more than fifty learned from a chart. Keep all ten in rotation; a tune you have not played for a month is a tune you have started to forget."
+          ],
+          "bullets": [
+            "Satin Doll: ii–V pairs as units; Ellington colour; space.",
+            "All of Me: secondary dominants resolving to minor chords in ABAC form.",
+            "Take the A Train: AABA with a II7#11 colour chord, played fast.",
+            "Paper Moon: the I–vi–ii–V turnaround and four-to-the-bar swing.",
+            "There Will Never Be Another You: multiple key centres; the graduation tune."
+          ],
+          "drills": [
+            "Comp Take the A Train at 120 bpm, then 160, then 200, shells only, five minutes at each tempo.",
+            "Comp Paper Moon with a different turnaround substitution on each A section: plain, tritone sub, passing diminished.",
+            "Comp There Will Never Be Another You from memory at 100 bpm and call out the key centre at the start of each phrase.",
+            "Run all ten tunes in the Chart Player once a week as a maintenance set."
+          ],
+          "tunes": ["satin-doll", "take-the-a-train", "there-will-never-be-another-you"]
+        }
+      ]
+    },
+    {
+      "id": "improvisation",
+      "title": "Improvisation",
+      "summary": "Build a solo vocabulary from the inside out: chord tones first, then the notes that connect them, then the rhythm and feel that make it music. Everything here is drilled on the tunes you already know.",
+      "lessons": [
+        {
+          "id": "chord-tone-soloing",
+          "title": "Chord-tone soloing and guide-tone lines",
+          "body": [
+            "The strongest notes to play over a chord are the notes of that chord. A solo built from arpeggios sounds inside and confident, and it teaches you to hear each change as it goes by. Scales come later; if you start with scales you will play the right notes in the wrong places and wonder why it sounds vague.",
+            "Begin with the guide-tone line you built in the harmony phase. Play only the 3rd and 7th of each chord, on time, in a comfortable register, through a whole tune. Then allow yourself the root and fifth as well, and play arpeggios in quarter notes. Then eighth notes. Keep the range within an octave and a half so the line stays connected.",
+            "The chord-tone spotlight in the Chart Player lights up the chord tones on the neck as the chart plays. Use it to check, not to lean on: play a chorus with it on, then a chorus with it off, and notice which chords you lose.",
+            "The aim of this lesson is a solo that outlines the changes so clearly that someone could name the tune from your line alone, with no chords behind you."
+          ],
+          "bullets": [
+            "Chord tones are the strongest notes; learn them before scales.",
+            "Start with guide tones, then add root and fifth, then arpeggios in time.",
+            "Keep the range narrow so the line connects from chord to chord.",
+            "A good chord-tone solo implies the changes without accompaniment."
+          ],
+          "drills": [
+            "Play 3rds and 7ths only over Fly Me to the Moon at 80 bpm, half notes, for five choruses. Then quarter notes.",
+            "Arpeggiate every chord in Autumn Leaves in eighth notes, ascending on one chord and descending on the next, at 90 bpm. Ten minutes.",
+            "Solo on Blue Bossa with the chord-tone spotlight on for one chorus and off for the next, alternating for ten minutes."
+          ],
+          "tunes": ["fly-me-to-the-moon", "autumn-leaves", "blue-bossa"]
+        },
+        {
+          "id": "approach-notes-enclosures",
+          "title": "Approach notes and enclosures",
+          "body": [
+            "Once you can hit chord tones on time, the next skill is arriving at them well. An approach note is a note a half step or a scale step away that lands on a chord tone on a strong beat. An enclosure surrounds the target from both sides, above and below, before landing. These two devices account for a large part of what makes a bebop line sound like bebop rather than a scale exercise.",
+            "Practise them as targets. Choose the third of the next chord as your target, and in the last two beats of the current chord play an approach from below, then from above, then an enclosure. Do it slowly enough that every landing is on the beat. The feeling you want is of the line leaning forward into each change.",
+            "Chromatic notes are not wrong notes when they resolve. A note a half step below the third sounds tense for an eighth note and then satisfying when it lands. The trick is rhythm: chromatic notes on weak beats, chord tones on strong beats.",
+            "Listen to how Charlie Christian and Wes Montgomery approach the third of a chord. It is nearly always by step and nearly always on time."
+          ],
+          "bullets": [
+            "Approach note: a half step or scale step below or above the target, resolving on the beat.",
+            "Enclosure: notes above and below the target, then the target.",
+            "Chromatic notes belong on weak beats; chord tones on strong beats.",
+            "Aim for the third of the next chord; it is the note that sells the change."
+          ],
+          "drills": [
+            "Over All of Me at 80 bpm, play only the third of each chord, approached from a half step below on the and of four. Then from a half step above. Then enclose it. Five minutes each.",
+            "Over F blues at 100 bpm, target the third of each chord with an enclosure, then the seventh. Ten choruses.",
+            "Write four two-bar phrases over a ii–V–I in C that each land on a chord tone via an enclosure, then play them in three other keys."
+          ],
+          "tunes": ["all-of-me", "f-blues"]
+        },
+        {
+          "id": "bebop-scales-and-ii-v-i",
+          "title": "Bebop scales and the ii–V–I line",
+          "body": [
+            "The bebop dominant scale is a Mixolydian scale with a chromatic passing note between the seventh and the root. The extra note gives the scale eight notes, so that when you play it in eighth notes starting on a chord tone, the chord tones keep landing on the downbeats. That is the whole idea: it is a rhythmic device dressed as a scale.",
+            "Play it over the V7 of a ii–V–I and it also works over the ii chord, because ii-7 and V7 share most of their notes. So a single bebop dominant scale, played descending from a chord tone, will carry you through the ii and V and drop you onto the third of the I chord. The ii–V–I gym is set up for exactly this kind of drill.",
+            "For the I chord, use the major bebop scale (a major scale with a passing note between the fifth and sixth) or simply the arpeggio. For the minor ii–V–i, the harmonic minor of the key covers the V7b9, and the bebop dominant scale can be played with a flat nine over the V chord.",
+            "Do not think of these as scales to run. Think of them as ways to get from one chord tone to another so that the arrivals fall on the beat. Once the sound is in your ear, drop the theory and just play the lines."
+          ],
+          "bullets": [
+            "Bebop dominant: Mixolydian plus a chromatic note between b7 and root; chord tones stay on downbeats.",
+            "One bebop dominant scale covers both the ii and the V of a ii–V–I.",
+            "Land on the third of the I chord; it is the strongest resolution note.",
+            "In minor, use harmonic minor over the V7b9.",
+            "These are rhythmic devices; the goal is placement, not speed."
+          ],
+          "drills": [
+            "ii–V–I gym: descending bebop dominant scale from the root, third, fifth and seventh of the V chord, landing on the third of I, in all twelve keys at 80 bpm. Fifteen minutes.",
+            "Solo over Autumn Leaves at 100 bpm using only bebop dominant scales and arpeggios of the I chords. Ten minutes.",
+            "Over Blue Bossa, use harmonic minor for the minor ii–V–i and the bebop dominant for the major ii–V–I, and notice the change in colour at the modulation."
+          ],
+          "tunes": ["autumn-leaves", "blue-bossa"]
+        },
+        {
+          "id": "blues-language",
+          "title": "Blues language",
+          "body": [
+            "Jazz is a blues music before it is a chord-scale music. The blues gives you a way to play over almost any tune without spelling every change, and it is what audiences feel in the body. As a fingerstyle player you may already have some blues in your hands; the work is to make it swing and to place it against jazz changes.",
+            "Start with the minor pentatonic and the blues scale over the F blues, but play them the way horn players do: in short phrases, with rests, with a clear rhythmic idea repeated and varied. Then mix the major pentatonic and the sixth of the key into the same phrases. Then aim a blues phrase so that it ends on the third of the IV chord in bar five. That single move joins blues feeling to chord-tone thinking.",
+            "Learn a few classic riffs by ear and use them as building blocks: the descending phrase from the root through the flat seventh and fifth, the flat third bending toward the major third, the repeated riff that rides the changes without moving. Repetition is not a weakness in the blues; it is the language.",
+            "Summertime is a minor tune that welcomes blues vocabulary, and Paper Moon and All of Me take a blues phrase gladly at the right moment. Use the blues to loosen the line whenever your chord-tone playing starts to sound like an exercise."
+          ],
+          "bullets": [
+            "Blues phrasing: short ideas, space, repetition with variation.",
+            "Mix minor and major pentatonic; the flat third and the sixth are the key colours.",
+            "Aim blues phrases at chord tones, especially the third of the IV chord in bar five.",
+            "Learn riffs by ear from records, not from a scale diagram.",
+            "Blues works over standards too; use it to loosen up a line."
+          ],
+          "drills": [
+            "Play F blues at 110 bpm with a single two-bar riff, repeated every chorus with one change of rhythm each time. Ten choruses.",
+            "Solo on F blues using the blues scale, but end every phrase on a chord tone of the chord you are on. Ten minutes.",
+            "Solo on Summertime at 80 bpm using only blues vocabulary, then repeat allowing chord tones and approach notes as well."
+          ],
+          "tunes": ["f-blues", "summertime", "paper-moon"]
+        },
+        {
+          "id": "swing-feel-and-phrasing",
+          "title": "Rhythm, phrasing and swing feel",
+          "body": [
+            "Swing is a rhythmic feel, not a rule. Eighth notes are played long-short, but the ratio changes with tempo: closer to triplets at medium tempos, nearly even at fast tempos. What does not change is the accent: the upbeat eighth is often slightly stronger and the line pushes forward. Playing in a jazz group means matching that feel with the drummer, so listen to ride cymbals as much as to guitarists.",
+            "Phrasing is where a solo becomes speech. Start phrases on the and of one or the and of two, not on the downbeat. End phrases on chord tones and leave a rest before the next one. Vary the length: a short call, a longer answer. Play a phrase, then play it again with a different ending. Silence is part of the line.",
+            "Fingerstyle players have an advantage in articulation: you can choose which notes are plucked and which are slurred, and you can accent freely. Use that. Accent the upbeats, ghost the notes you want to soften, and let hammer-ons and pull-offs carry the chromatic passing notes.",
+            "Record yourself and listen back. If the line does not swing on its own with the metronome on two and four, no amount of harmony will save it."
+          ],
+          "bullets": [
+            "Swing ratio changes with tempo; the forward lean and upbeat accent do not.",
+            "Start phrases off the downbeat, end on chord tones, leave rests.",
+            "Repeat an idea with a different ending; call and answer.",
+            "Use fingerstyle articulation to accent upbeats and ghost weak notes.",
+            "Practise with the metronome on two and four and record yourself."
+          ],
+          "drills": [
+            "Metronome on two and four at 100 bpm. Play continuous swing eighths on one note over F blues for two choruses, then in short phrases starting on the and of one. Ten minutes.",
+            "Solo on Fly Me to the Moon for five choruses playing no more than four bars of notes in any eight-bar phrase. Record it.",
+            "Take the A Train at 180 bpm: play only quarter notes and rests for three choruses, then swing eighths in two-bar phrases."
+          ],
+          "tunes": ["f-blues", "fly-me-to-the-moon", "take-the-a-train"]
+        },
+        {
+          "id": "transcription",
+          "title": "Transcription: learning by ear",
+          "body": [
+            "Every phrase you have read about in this phase came from a record. Transcription, learning solos or parts of solos by ear, is how the language actually passes from player to player. It trains your ear, your time and your taste at once, and it gives you real vocabulary instead of exercises.",
+            "Start small. Take one four-bar phrase from a solo you love, loop it, sing it until you can sing it exactly, and only then find it on the guitar. Do not write it down at first; the goal is to hear it and play it. Match the articulation and the time feel, not just the pitches. A phrase played with the wrong feel is the wrong phrase.",
+            "Once you have a phrase, do three things: play it in the original key over the tune, play it in three other keys, and work out why it works, which chord tones it targets and where the chromatic notes fall. Then build your own phrase using the same shape. That step turns a quote into vocabulary.",
+            "Choose guitarists first because the fingerings are natural, then horn players for phrasing. Charlie Christian, Wes Montgomery, Grant Green and Jim Hall are the place to start. Aim for one phrase a week, and keep a notebook of them in Roman numeral terms."
+          ],
+          "bullets": [
+            "Learn phrases by ear; sing them before you play them.",
+            "Match the time feel and articulation, not only the notes.",
+            "Take each phrase through other keys and analyse it in Roman numerals.",
+            "One phrase a week, kept in a notebook, becomes a vocabulary.",
+            "Start with guitarists for fingerings, then horn players for phrasing."
+          ],
+          "drills": [
+            "Choose a four-bar phrase over a ii–V–I from a Wes Montgomery or Grant Green solo. Loop it, sing it, play it. Then play it over the matching bars of Autumn Leaves at 90 bpm.",
+            "Transcribe one chorus of a blues solo (Kenny Burrell or Grant Green) and play it along with the record at full tempo, then over F blues in the Chart Player.",
+            "Write two of your own phrases each week modelled on a transcribed phrase, and use them in a solo on Fly Me to the Moon."
+          ],
+          "tunes": ["autumn-leaves", "f-blues", "fly-me-to-the-moon"]
+        }
+      ]
+    },
+    {
+      "id": "ensemble",
+      "title": "Playing with others",
+      "summary": "Everything you have practised alone now has to work in a room with a bass player, a drummer and a soloist. This phase is about listening, roles and the unwritten rules of playing jazz with people.",
+      "lessons": [
+        {
+          "id": "comping-behind-a-soloist",
+          "title": "Comping behind a soloist",
+          "body": [
+            "When someone else is soloing, your job is to make them sound good. That means three things: keep the form and the time absolutely clear, provide harmony without crowding, and respond to what they play. Most of the time you will play less than you want to. When in doubt, leave the bar empty and come in on the next one.",
+            "Listen to the soloist's register and stay out of it. If they are playing high, comp in the middle; if they are in the middle, comp low and sparse. Listen to their rhythm and answer it: if they leave a gap, a short chord on the and of two fills it; if they are playing busy lines, hold long chords. Watch for the top of the form and mark it with a slightly stronger chord so nobody gets lost.",
+            "If there is a pianist, one of you comps and the other lays out or plays very lightly. Talk about it before the tune if you can; if not, listen for the first eight bars and take the smaller role. Two people comping with different voicings and rhythms is the fastest way to make a band sound muddy.",
+            "Practise this with records. Comp along with a solo on a record and try to sound like part of the band, not like a separate practice session."
+          ],
+          "bullets": [
+            "Keep the form and time clear; that is the first job.",
+            "Stay out of the soloist's register; answer their rhythm instead of matching it.",
+            "Play less than you want to; empty bars are fine.",
+            "With a pianist, one of you comps; take the smaller role if unsure.",
+            "Mark the top of the form so nobody gets lost."
+          ],
+          "drills": [
+            "Comp along with a recorded solo on Autumn Leaves for the full track, changing register whenever the soloist does. Do this with three different recordings.",
+            "Comp All of Me at 140 bpm with the metronome on two and four, playing only on beats where you imagine a gap in a solo, no more than two chords per bar.",
+            "Comp Satin Doll for five minutes using only three-note voicings on the middle strings, then five minutes using only two-note guide tones."
+          ],
+          "tunes": ["autumn-leaves", "all-of-me", "satin-doll"]
+        },
+        {
+          "id": "walking-bass-on-guitar",
+          "title": "Walking bass on guitar",
+          "body": [
+            "Walking bass on guitar, a quarter-note bass line with chords stabbed on top, is a skill that turns you into a rhythm section on your own, and as a fingerstyle player you are already built for it: thumb on the bass, fingers on the chords. It is also the best way to understand what the bass player is doing when you comp, which makes your comping better.",
+            "The line is made of chord tones on the strong beats (root on one, often the fifth or third on three) and approach notes on the weak beats, especially a half step above or below the next root on beat four. Start with roots and fifths only, in quarter notes, then add the chromatic approach on beat four, then add the third on beat three. Keep it in the lowest octave you can play cleanly.",
+            "Add the chord as a short stab on the and of one or on beat two, with the top three strings, while the bass keeps walking. Do not try to sustain the chord; a short, dry stab is the sound. Joe Pass and later solo guitarists made whole careers out of this texture.",
+            "Blues is the place to learn it because the root motion is simple. Then Fly Me to the Moon, where the roots move in fourths and the chromatic approach on beat four does most of the work."
+          ],
+          "bullets": [
+            "Roots on beat one, chord tones on the strong beats, approach notes on beat four.",
+            "Build in stages: roots and fifths, then chromatic approaches, then thirds.",
+            "Chords are short stabs on the and of one or beat two; do not sustain them.",
+            "Learn it on the blues first, then on tunes that move in fourths."
+          ],
+          "drills": [
+            "Walk F blues with roots and fifths only, quarter notes at 90 bpm, ten choruses. Then add a chromatic approach note on beat four of every bar.",
+            "Walk Fly Me to the Moon at 100 bpm with chord stabs on the and of one, for ten minutes, recording it to check that the bass line is even.",
+            "Walk Blue Bossa at 110 bpm with a straight-eighth bossa feel: root on one, fifth on the and of two, chord on the and of one and three."
+          ],
+          "tunes": ["f-blues", "fly-me-to-the-moon", "blue-bossa"]
+        },
+        {
+          "id": "trading-fours",
+          "title": "Trading fours and keeping the form",
+          "body": [
+            "Trading fours means soloists alternate four-bar phrases, most often with the drummer, over the form. It sounds simple and it exposes anyone who has not internalised the form, because when the drummer is playing you have no chords to tell you where you are. You count, and you come back in on bar five with a phrase that makes sense.",
+            "Practise with the Chart Player: solo for four bars, rest for four bars while counting aloud, solo for four bars. Then rest for eight and come back in. Then try trading twos. The habit you are building is to keep the form running in your head no matter what is happening in the room.",
+            "When you do trade with a drummer, listen to what they play and answer it. If they play a rhythmic figure, quote it in your next four. If they play sparse, play sparse. Trading is a conversation, not a contest, and the best trades are the ones where the audience can hear the two players listening to each other.",
+            "The same skill applies to the head: knowing exactly where the tune ends and the solos start, and where the last chorus is, so that you can play the ending together. Watch for the nod from the leader on the last chorus."
+          ],
+          "bullets": [
+            "Keep the form counting in your head, especially during the drum bars.",
+            "Come back in on bar five (or nine) with a phrase that starts cleanly.",
+            "Answer the drummer's ideas; trading is a conversation.",
+            "Know the standard ways to end a tune and watch for the leader's cue."
+          ],
+          "drills": [
+            "F blues at 120 bpm in the Chart Player: solo four bars, count four bars aloud with no playing, for ten choruses. Then trade twos.",
+            "Take the A Train at 160 bpm: solo eight bars, rest eight, through the AABA form, three times.",
+            "Play a chorus of Paper Moon, then lay out for one full chorus counting silently, then come in exactly on the top."
+          ],
+          "tunes": ["f-blues", "take-the-a-train", "paper-moon"]
+        },
+        {
+          "id": "rhythm-section-and-jam-etiquette",
+          "title": "Playing with a rhythm section and jam session etiquette",
+          "body": [
+            "A rhythm section is a set of roles: the bass plays the root motion and the quarter-note pulse, the drums keep time and shape the dynamics, and you (or the pianist) supply harmony and rhythmic commentary. The band feels good when each role is clear and nobody duplicates another. Your comping should never fight the bass line, which is why you keep your voicings above the fifth string, and it should never fight the ride cymbal, which is why you listen to the drummer before you decide how much to play.",
+            "Time comes from the bass and drums. Lock your comping to the bass player's quarter notes, not to your own idea of the tempo, and if the time drifts do not try to correct it by pulling; play simpler and let the drummer settle it. Volume should be slightly below the horns and about level with the piano.",
+            "At a jam session: arrive early, listen to a set before you play, and call tunes you actually know from memory in a standard key. Tune up before you get on the stand. Take one or two choruses, not five. Comp for everyone else with the same care you want for yourself. When the head comes back, play it; do not keep soloing. Thank the house band and the leader. If you do not know a tune, sit it out rather than reading a chart on stage.",
+            "Sitting in with people is where the real learning happens, and most of it is about listening and not overplaying. The players who get called back are the ones who make the band sound good, not the ones with the most notes."
+          ],
+          "bullets": [
+            "Bass owns the root motion; keep your voicings above the fifth string.",
+            "Lock to the bass player's quarter notes; play simpler if the time drifts.",
+            "Call tunes you know from memory, in standard keys, at a tempo you can hold.",
+            "One or two choruses; play the head out; comp well for everyone.",
+            "Listen to a set before you play and thank the band."
+          ],
+          "drills": [
+            "Play along with a recording of Fly Me to the Moon, comping only, focused on locking to the bass player. Then repeat with a Summertime recording at a slower tempo.",
+            "Make a list of the ten tunes with their standard keys and comfortable tempos, and practise calling each one aloud with a count-in.",
+            "Rehearse a full performance shape of All of Me alone: head, two solo choruses, a chorus of comping for an imaginary soloist, head out and an ending, at 140 bpm."
+          ],
+          "tunes": ["fly-me-to-the-moon", "summertime", "all-of-me"]
+        },
+        {
+          "id": "repertoire-and-listening",
+          "title": "Repertoire lists and listening as a discipline",
+          "body": [
+            "Once the ten tunes in this app are solid, your repertoire grows by the same method: form, key centres, memorise by function, comp from memory, learn a phrase from a record. The list of tunes every jam session expects is well known and not long: a few blues heads, a rhythm changes tune, a handful of ballads, some bossa novas, and forty or fifty standards from the Great American Songbook and the bebop era. Build it one tune a fortnight and keep a written list with keys and tempos.",
+            "Keep two lists: tunes you can call (from memory, any tempo, comp and solo) and tunes you can survive (comp from memory, solo cautiously). Move tunes from the second list to the first. Do not add a tune to either list until you have played it with another person.",
+            "Listening is a practice, not a background activity. Set aside time each week to listen to one record all the way through, with attention, the way you would practise. Follow one instrument at a time: the bass line on one pass, the drummer's ride pattern on another, the comping on a third. Then listen for the form and count the choruses. The listening list in this app is a starting point, guitar-leaning but not exclusively; jazz guitar vocabulary came from horn players and pianists as much as from guitarists.",
+            "The habits of this whole curriculum come down to three things: know the changes by function, play the chord tones on time, and listen more than you play. Everything else is detail."
+          ],
+          "bullets": [
+            "Grow repertoire one tune a fortnight using the same method every time.",
+            "Keep a list of tunes you can call and tunes you can survive; move tunes up.",
+            "Listen to one record a week with full attention, one instrument at a time.",
+            "Learn from horn players and pianists as well as guitarists.",
+            "Know the changes, play the chord tones on time, listen more than you play."
+          ],
+          "drills": [
+            "Write your two repertoire lists today with keys and tempos, starting from the ten tunes in the app.",
+            "This week: one full listen to Somethin' Else following the bass, one following the drums, one following the piano comping. Count the choruses on Autumn Leaves.",
+            "Pick a new standard not in the app, apply the method from the repertoire phase, and play it with another person within two weeks."
+          ],
+          "tunes": ["autumn-leaves"]
+        }
+      ]
+    }
+  ]
+}

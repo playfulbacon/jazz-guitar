@@ -1,0 +1,43 @@
+{
+  "id": "f-blues",
+  "title": "F Blues",
+  "composer": "Traditional (jazz blues form)",
+  "defaultKey": "F",
+  "form": "12-bar blues",
+  "style": "swing",
+  "defaultTempo": 132,
+  "sections": [
+    { "label": "Blues", "bars": [
+      { "chords": [{ "symbol": "F7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bb7", "beats": 4 }] },
+      { "chords": [{ "symbol": "F7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 2 }, { "symbol": "F7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Bb7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bdim7", "beats": 4 }] },
+      { "chords": [{ "symbol": "F7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Am7", "beats": 2 }, { "symbol": "D7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "C7", "beats": 4 }] },
+      { "chords": [{ "symbol": "F7", "beats": 2 }, { "symbol": "D7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] }
+    ]}
+  ],
+  "analysis": {
+    "keyPairs": ["F"],
+    "notes": "The jazz blues adds three things to the basic three-chord blues: a ii–V into bar 5 (Cm7–F7 → Bb7), a passing diminished chord in bar 6 (Bdim7, really a rootless G7b9) that leads back to F7, and a turnaround in bars 8–12 made of the iii–VI–ii–V chain (Am7–D7–Gm7–C7). The F7 is the tonic even though it is a dominant chord: that is the blues."
+  },
+  "learning": {
+    "phase": 2,
+    "order": 3,
+    "why": "Every jam session calls a blues. Twelve bars, one key, but it packs in secondary dominants, a passing diminished chord, and a turnaround: the whole vocabulary in miniature.",
+    "concepts": ["Dominant chords as tonic", "ii–V into IV (bar 4)", "Passing diminished (bar 6)", "iii–VI–ii–V turnaround", "Blues scale versus chord tones"],
+    "drills": [
+      "Comp the twelve bars with 6th-string-root shells, then 5th-string, then alternate every bar.",
+      "Solo with the F blues scale for one chorus, then chord tones only for one chorus, then mix.",
+      "Play the 3rd of every chord on beat one, then the b7 on beat one.",
+      "Loop bars 9–12 and practise turnaround lines that land on the F on bar 1."
+    ],
+    "listen": ["Kenny Burrell — Midnight Blue (1963)", "Grant Green — Idle Moments (1963)", "Charlie Parker — Now's the Time"],
+    "milestones": ["Know the changes from memory", "Comp shells through the form without looking", "Comp drop-2 voicings with the trio", "Play a chord-tone solo over the whole form", "Play three choruses without repeating a phrase"]
+  }
+}

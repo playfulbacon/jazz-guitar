@@ -1,0 +1,126 @@
+{
+  "albums": [
+    {
+      "id": "genius-of-the-electric-guitar",
+      "artist": "Charlie Christian",
+      "title": "The Genius of the Electric Guitar",
+      "year": 2002,
+      "label": "Columbia/Legacy",
+      "why": "Charlie Christian is where jazz guitar as a solo voice begins, and his lines are still the clearest introduction to swing phrasing you can find. Listen to how he builds a solo from short riffs, repeats them with small changes, and lands chord tones on the beat with a horn player's confidence. His time feel is relaxed but pushes forward, and his tone, an amplified archtop played with a pick, is the sound every later guitarist reacted to. Transcribe a few of his blues choruses before anything else; they are simple enough to learn and deep enough to keep.",
+      "context": "These recordings come from Christian's short tenure with the Benny Goodman Sextet and Orchestra between 1939 and 1941, when the electric guitar was a novelty and he made it a lead instrument. He died in 1942 at 25, having also taken part in the after-hours sessions at Minton's Playhouse that fed into bebop. This box set collects the Columbia sides; earlier LPs under the same title cover the same material.",
+      "tracks": ["Seven Come Eleven", "Rose Room", "Air Mail Special", "Solo Flight"]
+    },
+    {
+      "id": "best-of-django-reinhardt",
+      "artist": "Django Reinhardt",
+      "title": "The Best of Django Reinhardt",
+      "year": 1996,
+      "label": "Blue Note",
+      "why": "Django is the other founding voice of jazz guitar, working without amplification and with two fingers of his left hand damaged in a fire. For a fingerstyle player the lessons are in his attack and articulation: every note is deliberate, the arpeggios are shaped rather than run, and the chromatic ornaments always resolve on time. Listen to the rhythm guitar underneath, too. The pompe, the driving four-to-the-bar chording of the Quintette du Hot Club de France, is a masterclass in making a band swing with no drummer.",
+      "context": "Reinhardt, a Manouche Romani guitarist raised outside Paris, formed the Quintette du Hot Club de France with violinist Stephane Grappelli in 1934 and made the first jazz that Europeans could call their own. This compilation draws on his 1930s and 1940s recordings; any well-chosen Django collection covers the same ground.",
+      "tracks": ["Minor Swing", "Nuages", "Djangology"]
+    },
+    {
+      "id": "saxophone-colossus",
+      "artist": "Sonny Rollins",
+      "title": "Saxophone Colossus",
+      "year": 1956,
+      "label": "Prestige",
+      "why": "This record is the textbook for thematic improvisation: Rollins takes a small motif and turns it, extends it, and brings it back, so that a solo has a shape you can follow from the first chorus to the last. For a guitarist it is the best argument for playing fewer ideas more thoroughly. Listen to Blue 7 for the way a simple blues phrase becomes a whole architecture, and to St. Thomas for calypso rhythm played with swing-era relaxation. Tommy Flanagan's comping and Max Roach's drumming are worth separate listens.",
+      "context": "Recorded in June 1956 with Flanagan, Doug Watkins and Roach, at the height of Rollins's first great period and shortly before he began a two-year sabbatical from public performance. Gunther Schuller's essay on Blue 7 made the record a landmark in how jazz improvisation is discussed.",
+      "tracks": ["St. Thomas", "Blue 7", "Moritat", "Strode Rode"]
+    },
+    {
+      "id": "somethin-else",
+      "artist": "Cannonball Adderley",
+      "title": "Somethin' Else",
+      "year": 1958,
+      "label": "Blue Note",
+      "why": "The version of Autumn Leaves here is the one to learn the tune from: a slow, spacious arrangement with a famous introduction, Miles Davis stating the melody with almost nothing, and Cannonball answering with a flood of bebop. It teaches how much space a ballad tempo can hold and how differently two great players can treat the same changes. Hank Jones's comping is a model of restraint, and Sam Jones's bass line is worth following through a whole chorus. Love for Sale shows how a Latin feel can be laid over standard changes.",
+      "context": "Recorded in March 1958 for Blue Note while both Adderley and Davis were in Davis's sextet, a year before Kind of Blue. It is one of very few records on which Davis appears as a sideman after becoming a leader, and the relaxed, blues-inflected feel points toward what the two would do together next.",
+      "tracks": ["Autumn Leaves", "Love for Sale", "Somethin' Else", "One for Daddy-O"],
+      "tunes": ["autumn-leaves"]
+    },
+    {
+      "id": "kind-of-blue",
+      "artist": "Miles Davis",
+      "title": "Kind of Blue",
+      "year": 1959,
+      "label": "Columbia",
+      "why": "No guitar on it, and still essential. Kind of Blue is the record for learning how to play over a single chord for a long time without losing shape, and for hearing how differently Davis, Coltrane, Adderley and Evans handle the same space. Listen to how Davis phrases: short statements, long rests, almost every note a chord tone or a deliberate colour. Then follow Paul Chambers's bass and Jimmy Cobb's ride cymbal and notice how the whole band breathes together. All Blues and Freddie Freeloader are blues forms you can play tomorrow.",
+      "context": "Recorded in two sessions in March and April 1959 with minimal rehearsal from sketches Davis and Bill Evans brought in. It is the best-selling jazz album ever made and the record that introduced modal playing to a wide audience, shifting attention from chord changes to scales and space.",
+      "tracks": ["So What", "Freddie Freeloader", "Blue in Green", "All Blues"]
+    },
+    {
+      "id": "incredible-jazz-guitar",
+      "artist": "Wes Montgomery",
+      "title": "The Incredible Jazz Guitar of Wes Montgomery",
+      "year": 1960,
+      "label": "Riverside",
+      "why": "This is the record that set the modern jazz guitar vocabulary: single lines, then octaves, then block chords, each chorus building on the last. Wes played with his thumb, so his articulation is closer to a fingerstyle player's than to a pick player's, and his tone is warm and round. Listen to Four on Six for lines over a minor vamp and fast ii–Vs, West Coast Blues for a blues in 3/4, and Polka Dots and Moonbeams for how to play a ballad melody with chords. Tommy Flanagan is on piano again, comping with the same economy as on Saxophone Colossus.",
+      "context": "Recorded in January 1960, shortly after Cannonball Adderley heard Wes in an Indianapolis club and urged Riverside to sign him. Wes was 36 and had spent years playing local gigs after a stint with Lionel Hampton; this album made him the most influential jazz guitarist since Charlie Christian almost overnight.",
+      "tracks": ["Four on Six", "West Coast Blues", "Airegin", "Polka Dots and Moonbeams"]
+    },
+    {
+      "id": "undercurrent",
+      "artist": "Jim Hall and Bill Evans",
+      "title": "Undercurrent",
+      "year": 1962,
+      "label": "United Artists",
+      "why": "A duo record with no bass or drums, so every choice the guitar makes is exposed, and Jim Hall's choices are a course in taste. Listen to how he comps for Evans: two and three-note voicings, rhythms that answer the piano, whole passages where he plays almost nothing. Then listen to his solos, where the lines are made of chord tones and short motifs rather than speed. My Funny Valentine, taken at an unexpected up tempo, is the track to study for interplay; the ballads are the ones to study for space.",
+      "context": "Recorded in April and May 1962, a year after the death of Evans's bassist Scott LaFaro, when Evans was working in new formats. Hall had come from the Chico Hamilton and Jimmy Giuffre groups and would soon record with Sonny Rollins; the two reunited for Intermodulation in 1966.",
+      "tracks": ["My Funny Valentine", "I Hear a Rhapsody", "Skating in Central Park", "Darn That Dream"]
+    },
+    {
+      "id": "midnight-blue",
+      "artist": "Kenny Burrell",
+      "title": "Midnight Blue",
+      "year": 1963,
+      "label": "Blue Note",
+      "why": "The blues, played with jazz harmony and a great deal of patience. Burrell's lines are unhurried, mostly pentatonic with chromatic approaches, and every phrase leaves room for the next; it is the best record for learning that blues language and bebop language are the same language at different speeds. Chitlins con Carne is a minor groove you can learn today, and the solo guitar piece Soul Lament shows how much can be said with a few chords. Stanley Turrentine's tenor phrasing is a second lesson in the same idiom.",
+      "context": "Recorded in January 1963 with Turrentine, Major Holley, Bill English and Ray Barretto on congas, at a time when Blue Note was recording a great deal of blues-based, groove-oriented jazz. Burrell was already a widely recorded sideman and the album became his signature.",
+      "tracks": ["Chitlins con Carne", "Midnight Blue", "Soul Lament", "Wavy Gravy"]
+    },
+    {
+      "id": "idle-moments",
+      "artist": "Grant Green",
+      "title": "Idle Moments",
+      "year": 1963,
+      "label": "Blue Note",
+      "why": "Grant Green played almost entirely single lines, with a horn player's phrasing and a metronomic sense of time, and his solos are among the easiest to transcribe and the hardest to play with his feel. The title track is a fifteen-minute slow blues-inflected piece where every soloist plays with total patience; listen for how Green repeats a note or a short figure until it becomes the point. The rhythm section, with Bobby Hutcherson's vibes and Duke Pearson's piano, is a model of how to accompany sparsely at a slow tempo.",
+      "context": "Recorded in November 1963 and released in 1965, with Joe Henderson on tenor, Hutcherson, Pearson, Bob Cranshaw and Al Harewood. The famous long title track came about when the band misread the arrangement's length and played double choruses; the producer kept it.",
+      "tracks": ["Idle Moments", "Jean de Fleur", "Django", "Nomad"]
+    },
+    {
+      "id": "smokin-at-the-half-note",
+      "artist": "Wes Montgomery",
+      "title": "Smokin' at the Half Note",
+      "year": 1965,
+      "label": "Verve",
+      "why": "Wes with the Wynton Kelly Trio, live, and by consensus the finest recorded jazz guitar playing. No Blues is a long blues in F on which Wes builds chorus after chorus, from single lines to octaves to chords, without repeating himself; learn a chorus of it and you have a course in blues language. Unit 7 and Four on Six show him over changes at tempo. Listen to Kelly's comping, which answers Wes rhythmically, and to Paul Chambers and Jimmy Cobb, the same rhythm section that played on Kind of Blue.",
+      "context": "Recorded in June 1965 at the Half Note club in New York, with additional studio tracks from later that year. It came just before Wes's commercial period of orchestrated pop covers, and it is the record most later guitarists cite when asked what made them want to play jazz.",
+      "tracks": ["No Blues", "Unit 7", "Four on Six", "If You Could See Me Now"]
+    },
+    {
+      "id": "ellington-uptown",
+      "artist": "Duke Ellington",
+      "title": "Ellington Uptown",
+      "year": 1953,
+      "label": "Columbia",
+      "why": "Ellington's band is where much of the harmony you are learning was worked out, and this record includes an extended version of Take the A Train that shows the tune's form and its famous II7 chord in the composer's own hands. Listen to how the band voices chords, with close harmony in the saxes and the brass answering, and to how the arrangement builds through choruses. The rhythm section, with Wendell Marshall's bass and Louie Bellson's drums, shows the big-band four feel that Freddie Green-style comping is built to serve.",
+      "context": "Recorded in 1951 and 1952 and issued by Columbia in 1953, at a low point in the band's commercial fortunes before the celebrated Newport comeback of 1956. It captures the orchestra playing extended concert pieces alongside a hit tune, and Betty Roche's vocal on Take the A Train was widely admired.",
+      "tracks": ["Take the 'A' Train", "Skin Deep", "The Mooche", "A Tone Parallel to Harlem"],
+      "tunes": ["take-the-a-train"]
+    },
+    {
+      "id": "virtuoso",
+      "artist": "Joe Pass",
+      "title": "Virtuoso",
+      "year": 1973,
+      "label": "Pablo",
+      "why": "Solo guitar, no overdubs, on standards: melody, chords, bass lines and improvisation all at once, played with a plectrum and fingers. For a fingerstyle player this is the direct model for what the whole curriculum builds toward, and it is worth listening to how Pass walks a bass line under chord stabs, drops into single lines and returns to full chords without the time ever faltering. Listen for the tunes' forms too; he keeps every chorus honest. Take one ballad and one up-tempo track and follow the changes with a chart.",
+      "context": "Recorded in 1973 for Norman Granz's new Pablo label, which was built around Oscar Peterson, Ella Fitzgerald and Pass. It revived the idea of unaccompanied jazz guitar as a concert format and led to several further Virtuoso volumes.",
+      "tracks": ["Night and Day", "Stella by Starlight", "How High the Moon", "Cherokee"]
+    }
+  ]
+}

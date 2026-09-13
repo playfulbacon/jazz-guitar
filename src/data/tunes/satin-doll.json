@@ -1,0 +1,61 @@
+{
+  "id": "satin-doll",
+  "title": "Satin Doll",
+  "composer": "Duke Ellington and Billy Strayhorn",
+  "defaultKey": "C",
+  "form": "AABA",
+  "style": "swing",
+  "defaultTempo": 126,
+  "sections": [
+    { "label": "A", "repeat": 2, "bars": [
+      { "chords": [{ "symbol": "Dm7", "beats": 2 }, { "symbol": "G7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 2 }, { "symbol": "G7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Em7", "beats": 2 }, { "symbol": "A7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Em7", "beats": 2 }, { "symbol": "A7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Am7", "beats": 2 }, { "symbol": "D7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Abm7", "beats": 2 }, { "symbol": "Db7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }], "ending": 1 },
+      { "chords": [{ "symbol": "Em7", "beats": 2 }, { "symbol": "A7", "beats": 2 }], "ending": 1 },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }], "ending": 2 },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }], "ending": 2 }
+    ]},
+    { "label": "B", "bars": [
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Fmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Am7", "beats": 2 }, { "symbol": "D7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Am7", "beats": 2 }, { "symbol": "D7", "beats": 2 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 2 }, { "symbol": "G7", "beats": 2 }] }
+    ]},
+    { "label": "A", "bars": [
+      { "chords": [{ "symbol": "Dm7", "beats": 2 }, { "symbol": "G7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 2 }, { "symbol": "G7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Em7", "beats": 2 }, { "symbol": "A7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Em7", "beats": 2 }, { "symbol": "A7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Am7", "beats": 2 }, { "symbol": "D7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Abm7", "beats": 2 }, { "symbol": "Db7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }] }
+    ]}
+  ],
+  "analysis": {
+    "keyPairs": ["C", "F"],
+    "notes": "A study in ii–V pairs that do not resolve where you expect. Dm7–G7 is the home ii–V, Em7–A7 is ii–V of ii, Am7–D7 is ii–V of V, and Abm7–Db7 is a tritone substitute for that same ii–V (Db7 replaces G7) sliding down into Cmaj7 by half step. The bridge moves to the subdominant key (Gm7–C7–Fmaj7) and then returns via Am7–D7 and G7. Two chords per bar means you must comp two grips a bar comfortably."
+  },
+  "learning": {
+    "phase": 2,
+    "order": 7,
+    "why": "Two ii–V pairs per line, a tritone substitution, and a bridge in the IV key: this is where your ii–V vocabulary gets tested at speed.",
+    "concepts": ["ii–V pairs of other keys", "Tritone substitution (Abm7–Db7 for Dm7–G7)", "Bridge in the subdominant", "Two-chords-per-bar comping"],
+    "drills": [
+      "Comp the A section with shells only, changing grips every two beats at 100 BPM.",
+      "Play the 3rd of each chord on the beat it arrives, nothing else.",
+      "Loop bars 5–7 and hear the Abm7–Db7 slide into Cmaj7.",
+      "Use the ii–V–I gym with the major mix set to 100% at 126 BPM."
+    ],
+    "listen": ["Duke Ellington — Ellington at Newport (1956)", "Joe Pass — Virtuoso (1973)", "Oscar Peterson — Night Train (1962)"],
+    "milestones": ["Know the form and changes from memory", "Comp shells through the form without looking", "Comp drop-2 voicings with the trio", "Play a chord-tone solo over the whole form", "Play the melody from memory (learn it by ear from a recording)"]
+  }
+}

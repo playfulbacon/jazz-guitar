@@ -1,0 +1,61 @@
+{
+  "id": "autumn-leaves",
+  "title": "Autumn Leaves",
+  "composer": "Joseph Kosma",
+  "defaultKey": "Gm",
+  "form": "AABC",
+  "style": "swing",
+  "defaultTempo": 140,
+  "sections": [
+    { "label": "A", "repeat": 2, "bars": [
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "F7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bbmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Am7b5", "beats": 4 }] },
+      { "chords": [{ "symbol": "D7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm6", "beats": 4 }], "ending": 1 },
+      { "chords": [{ "symbol": "Gm6", "beats": 4 }], "ending": 1 },
+      { "chords": [{ "symbol": "Gm6", "beats": 4 }], "ending": 2 },
+      { "chords": [{ "symbol": "Gm6", "beats": 2 }, { "symbol": "D7", "beats": 2 }], "ending": 2 }
+    ]},
+    { "label": "B", "bars": [
+      { "chords": [{ "symbol": "Am7b5", "beats": 4 }] },
+      { "chords": [{ "symbol": "D7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "F7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bbmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] }
+    ]},
+    { "label": "C", "bars": [
+      { "chords": [{ "symbol": "Am7b5", "beats": 4 }] },
+      { "chords": [{ "symbol": "D7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Fm7", "beats": 2 }, { "symbol": "Bb7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Am7b5", "beats": 2 }, { "symbol": "D7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Gm6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm6", "beats": 2 }, { "symbol": "D7", "beats": 2 }] }
+    ]}
+  ],
+  "analysis": {
+    "keyPairs": ["Bb", "Gm"],
+    "notes": "The textbook ii–V–I tune. Every phrase is either a major ii–V–I in Bb (Cm7–F7–Bbmaj7) or a minor ii–V–i in G minor (Am7b5–D7–Gm6), and the two keys are relatives, so one scale (Bb major / G natural minor) covers almost everything. The exception is the D7: raise the F to F# (harmonic minor) over it. The last eight bars add a short chain of ii–Vs (Gm7–C7, Fm7–Bb7) that walks down to Ebmaj7."
+  },
+  "learning": {
+    "phase": 2,
+    "order": 2,
+    "why": "The classic first standard for a reason: it teaches the major and minor ii–V–I side by side, in relative keys, at a medium swing tempo. If you can play Autumn Leaves convincingly you can play the language.",
+    "concepts": ["Major ii–V–I", "Minor ii–V–i with half-diminished ii", "Relative major and minor", "Harmonic minor over V7 in minor", "Chains of ii–Vs (bars 27–28)"],
+    "drills": [
+      "Loop bars 1–4 (Cm7–F7–Bbmaj7–Ebmaj7) and comp with shells until the 3rds and 7ths move by step.",
+      "Loop bars 5–8 (Am7b5–D7–Gm6) and practise the F# on the D7 in your lines.",
+      "Play the whole form with only the 3rd and 7th of each chord as a two-note solo.",
+      "Use the ii–V–I gym in Bb and Gm at 140 BPM."
+    ],
+    "listen": ["Cannonball Adderley — Somethin' Else (1958)", "Bill Evans — Portrait in Jazz (1960)", "Wynton Kelly — Kelly Blue (1959)"],
+    "milestones": ["Know the form and changes from memory", "Comp shells through the form without looking", "Comp drop-2 voicings with the trio", "Play a chord-tone solo over the whole form", "Play the melody from memory (learn it by ear from a recording)"]
+  }
+}

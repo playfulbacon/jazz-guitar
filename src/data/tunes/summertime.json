@@ -1,0 +1,49 @@
+{
+  "id": "summertime",
+  "title": "Summertime",
+  "composer": "George Gershwin",
+  "defaultKey": "Am",
+  "form": "16 bars",
+  "style": "swing",
+  "defaultTempo": 96,
+  "sections": [
+    { "label": "A", "bars": [
+      { "chords": [{ "symbol": "Am6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 2 }, { "symbol": "E7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Am6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 2 }, { "symbol": "E7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Am6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 2 }, { "symbol": "E7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "F7", "beats": 2 }, { "symbol": "E7", "beats": 2 }] }
+    ]},
+    { "label": "B", "bars": [
+      { "chords": [{ "symbol": "Am6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 2 }, { "symbol": "E7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Am6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 2 }, { "symbol": "E7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Cmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 2 }, { "symbol": "E7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Am6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bm7b5", "beats": 2 }, { "symbol": "E7", "beats": 2 }] }
+    ]}
+  ],
+  "analysis": {
+    "keyPairs": ["Am", "C"],
+    "notes": "A sixteen-bar minor tune that lives on i and its minor ii–V (Bm7b5–E7). The iv chord (Dm7) arrives in bar 7, the relative major (Cmaj7) in bar 13, and the F7–E7 in bar 8 is a tritone-flavoured approach into the dominant. Because so much of the tune sits on Am6, it is the place to learn the minor tonic sounds: m6, m(maj7), and the A minor pentatonic/blues scale. The melody is still under copyright, so learn it by ear from a recording; only the chords are here."
+  },
+  "learning": {
+    "phase": 2,
+    "order": 6,
+    "why": "Slow, minor, and mostly one chord: room to hear the minor ii–V resolve and to work on tone, phrasing, and space rather than chasing changes.",
+    "concepts": ["Minor tonic colours (m6, m(maj7))", "Minor ii–V–i at a slow tempo", "Minor pentatonic and blues language", "Playing with space"],
+    "drills": [
+      "Comp with a two-feel bass in the guitar (thumb on 1 and 3) under Am6 and E7b9 shapes.",
+      "Solo with only the A blues scale for two choruses, then only chord tones for two.",
+      "Over every E7, land the G# on beat one and resolve to A.",
+      "Play a chorus using no more than three notes per bar."
+    ],
+    "listen": ["Miles Davis — Porgy and Bess (1959)", "John Coltrane — My Favorite Things (1961)", "Ella Fitzgerald and Louis Armstrong — Porgy and Bess (1958)"],
+    "milestones": ["Know the form and changes from memory", "Comp shells through the form without looking", "Comp drop-2 voicings with the trio", "Play a chord-tone solo over the whole form", "Play the melody from memory (learn it by ear from a recording)"]
+  }
+}

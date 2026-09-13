@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 
 // On GitHub Pages the site lives under /<repo-name>/. The deploy workflow sets

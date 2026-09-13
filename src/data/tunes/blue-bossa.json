@@ -1,0 +1,49 @@
+{
+  "id": "blue-bossa",
+  "title": "Blue Bossa",
+  "composer": "Kenny Dorham",
+  "defaultKey": "Cm",
+  "form": "16 bars",
+  "style": "bossa",
+  "defaultTempo": 150,
+  "sections": [
+    { "label": "A", "bars": [
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7b5", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] }
+    ]},
+    { "label": "B", "bars": [
+      { "chords": [{ "symbol": "Ebm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Ab7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dbmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dbmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7b5", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7b5", "beats": 2 }, { "symbol": "G7", "beats": 2 }] }
+    ]}
+  ],
+  "analysis": {
+    "keyPairs": ["Cm", "Db"],
+    "notes": "Sixteen bars, two keys. The first half is a minor i–iv–iiø–V–i in C minor; the second half jumps a half step up to a major ii–V–I in Db (Ebm7–Ab7–Dbmaj7) before returning through the minor ii–V. Because the two keys are a half step apart, the shift is heard immediately, which makes this a great tune for practising key-centre awareness. Straight eighths, bossa feel."
+  },
+  "learning": {
+    "phase": 2,
+    "order": 5,
+    "why": "A short, memorable form that contrasts a minor ii–V–i with a major ii–V–I a half step away, in a straight-eighth bossa feel. Good for getting comfortable outside swing.",
+    "concepts": ["Minor ii–V–i", "Key-centre shift by half step", "Bossa nova comping (straight eighths)", "Melodic minor / harmonic minor over G7"],
+    "drills": [
+      "Comp a bossa pattern (bass note on 1 and 3, chord on the ands) with the trio at 140 BPM.",
+      "Play C minor pentatonic for eight bars, then Db major pentatonic for four, then back.",
+      "Loop bars 9–12 and practise the Ebm7–Ab7–Dbmaj7 with guide tones.",
+      "Sing the root of each chord one bar ahead while the trio plays."
+    ],
+    "listen": ["Joe Henderson — Page One (1963)", "Dexter Gordon — Biting the Apple (1976)"],
+    "milestones": ["Know the form and changes from memory", "Comp a bossa pattern through the form", "Comp drop-2 voicings with the trio", "Play a chord-tone solo over the whole form", "Play the melody from memory (learn it by ear from a recording)"]
+  }
+}

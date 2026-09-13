@@ -1,0 +1,61 @@
+{
+  "id": "paper-moon",
+  "title": "It's Only a Paper Moon",
+  "composer": "Harold Arlen",
+  "defaultKey": "F",
+  "form": "AABA",
+  "style": "swing",
+  "defaultTempo": 144,
+  "sections": [
+    { "label": "A", "repeat": 2, "bars": [
+      { "chords": [{ "symbol": "F6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] },
+      { "chords": [{ "symbol": "F6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] },
+      { "chords": [{ "symbol": "F6", "beats": 2 }, { "symbol": "F7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Bb6", "beats": 2 }, { "symbol": "Bdim7", "beats": 2 }] },
+      { "chords": [{ "symbol": "F6", "beats": 2 }, { "symbol": "D7", "beats": 2 }], "ending": 1 },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }], "ending": 1 },
+      { "chords": [{ "symbol": "F6", "beats": 4 }], "ending": 2 },
+      { "chords": [{ "symbol": "F6", "beats": 4 }], "ending": 2 }
+    ]},
+    { "label": "B", "bars": [
+      { "chords": [{ "symbol": "Bb6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bb6", "beats": 4 }] },
+      { "chords": [{ "symbol": "F6", "beats": 4 }] },
+      { "chords": [{ "symbol": "F6", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "C7", "beats": 4 }] }
+    ]},
+    { "label": "A", "bars": [
+      { "chords": [{ "symbol": "F6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] },
+      { "chords": [{ "symbol": "F6", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] },
+      { "chords": [{ "symbol": "F6", "beats": 2 }, { "symbol": "F7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Bb6", "beats": 2 }, { "symbol": "Bdim7", "beats": 2 }] },
+      { "chords": [{ "symbol": "F6", "beats": 2 }, { "symbol": "D7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] }
+    ]}
+  ],
+  "analysis": {
+    "keyPairs": ["F", "Bb"],
+    "notes": "A swing-era tune built on I–ii–V motion with the classic I–I7–IV–#ivdim7 walk-up in bars 5–6 (F6–F7–Bb6–Bdim7) and a I–VI7–ii–V turnaround. The bridge leans on the subdominant (Bb6) and then II7 (G7, V7/V) before the ii–V back home. Simple enough to play at a bright tempo, rich enough to practise passing diminished chords and turnarounds."
+  },
+  "learning": {
+    "phase": 2,
+    "order": 9,
+    "why": "Rhythm changes in miniature: the I–I7–IV–#ivdim7 walk-up and the I–VI–ii–V turnaround are the two most common four-bar cells in the swing repertoire.",
+    "concepts": ["I–I7–IV–#ivdim7 walk-up", "I–VI7–ii–V turnaround", "II7 (V7/V) in the bridge", "Four-to-the-bar comping"],
+    "drills": [
+      "Comp four to the bar (Freddie Green style) with shells through the whole form at 144 BPM.",
+      "Loop bars 5–6 and connect F6–F7–Bb6–Bdim7 with a bass line in the thumb.",
+      "Solo using the F major scale and target the B natural over Bdim7.",
+      "Play the turnaround (F6–D7–Gm7–C7) in all twelve keys with the gym's transposition."
+    ],
+    "listen": ["Nat King Cole Trio — It's Only a Paper Moon (1943)", "Ella Fitzgerald — Ella Fitzgerald Sings the Harold Arlen Song Book (1961)"],
+    "milestones": ["Know the form and changes from memory", "Comp shells four-to-the-bar through the form", "Comp drop-2 voicings with the trio", "Play a chord-tone solo over the whole form", "Play the melody from memory (learn it by ear from a recording)"]
+  }
+}

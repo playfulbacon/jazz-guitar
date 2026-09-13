@@ -1,0 +1,61 @@
+{
+  "id": "take-the-a-train",
+  "title": "Take the A Train",
+  "composer": "Billy Strayhorn",
+  "defaultKey": "C",
+  "form": "AABA",
+  "style": "swing",
+  "defaultTempo": 160,
+  "sections": [
+    { "label": "A", "repeat": 2, "bars": [
+      { "chords": [{ "symbol": "C6", "beats": 4 }] },
+      { "chords": [{ "symbol": "C6", "beats": 4 }] },
+      { "chords": [{ "symbol": "D7#11", "beats": 4 }] },
+      { "chords": [{ "symbol": "D7#11", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "C6", "beats": 4 }], "ending": 1 },
+      { "chords": [{ "symbol": "Dm7", "beats": 2 }, { "symbol": "G7", "beats": 2 }], "ending": 1 },
+      { "chords": [{ "symbol": "C6", "beats": 4 }], "ending": 2 },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }], "ending": 2 }
+    ]},
+    { "label": "B", "bars": [
+      { "chords": [{ "symbol": "Fmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "D7", "beats": 4 }] },
+      { "chords": [{ "symbol": "D7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] }
+    ]},
+    { "label": "A", "bars": [
+      { "chords": [{ "symbol": "C6", "beats": 4 }] },
+      { "chords": [{ "symbol": "C6", "beats": 4 }] },
+      { "chords": [{ "symbol": "D7#11", "beats": 4 }] },
+      { "chords": [{ "symbol": "D7#11", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "C6", "beats": 4 }] },
+      { "chords": [{ "symbol": "C6", "beats": 4 }] }
+    ]}
+  ],
+  "analysis": {
+    "keyPairs": ["C", "F"],
+    "notes": "The AABA form in its purest state. The A section is I – II7#11 – ii – V – I: the D7#11 is a V7/V whose #11 (G#) rubs against the key, and it is the whole flavour of the tune. The second ending turns C6 into C7 (V7/IV) to reach the bridge in F. The bridge sits on Fmaj7 for four bars, then D7 (V7/ii) leads back to Dm7–G7 and the last A. Fast tempos are the norm, so comp economically."
+  },
+  "learning": {
+    "phase": 2,
+    "order": 8,
+    "why": "The archetypal AABA tune and the archetypal II7#11 chord. Also your first fast tune: learn to comp lightly and place notes rather than fill every beat.",
+    "concepts": ["AABA form with first and second endings", "II7#11 (lydian dominant)", "V7/IV into the bridge", "Comping at fast tempos"],
+    "drills": [
+      "Loop bars 3–4 and play D lydian dominant (D E F# G# A B C) against the D7#11.",
+      "Comp only on beats 2 and 4 for a whole chorus at 160 BPM, then 180.",
+      "Solo on the A section using the C major scale but playing G# on every D7#11.",
+      "Trade fours with the trio: four bars comping, four bars soloing."
+    ],
+    "listen": ["Duke Ellington — Ellington at Newport (1956)", "Duke Ellington — Masterpieces by Ellington (1951)", "Oscar Peterson — Night Train (1962)"],
+    "milestones": ["Know the form and changes from memory", "Comp shells through the form at 160 BPM", "Comp drop-2 voicings with the trio", "Play a chord-tone solo over the whole form", "Play the melody from memory (learn it by ear from a recording)"]
+  }
+}

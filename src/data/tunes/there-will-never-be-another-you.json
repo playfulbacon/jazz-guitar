@@ -1,0 +1,69 @@
+{
+  "id": "there-will-never-be-another-you",
+  "title": "There Will Never Be Another You",
+  "composer": "Harry Warren",
+  "defaultKey": "Eb",
+  "form": "ABAC",
+  "style": "swing",
+  "defaultTempo": 168,
+  "sections": [
+    { "label": "A", "bars": [
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7b5", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bbm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Eb7", "beats": 4 }] }
+    ]},
+    { "label": "B", "bars": [
+      { "chords": [{ "symbol": "Abmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Db7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bb7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Fm7", "beats": 2 }, { "symbol": "Bb7", "beats": 2 }] }
+    ]},
+    { "label": "A", "bars": [
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Dm7b5", "beats": 4 }] },
+      { "chords": [{ "symbol": "G7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Cm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Bbm7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Eb7", "beats": 4 }] }
+    ]},
+    { "label": "C", "bars": [
+      { "chords": [{ "symbol": "Abmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Db7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Am7b5", "beats": 2 }, { "symbol": "D7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Gm7", "beats": 2 }, { "symbol": "C7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Fm7", "beats": 2 }, { "symbol": "Bb7", "beats": 2 }] },
+      { "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+      { "chords": [{ "symbol": "Fm7", "beats": 2 }, { "symbol": "Bb7", "beats": 2 }] }
+    ]}
+  ],
+  "analysis": {
+    "keyPairs": ["Eb", "Cm", "Ab"],
+    "notes": "A bebop favourite because every phrase is a ii–V into somewhere: a minor ii–V–i into Cm (Dm7b5–G7–Cm7), a ii–V into Ab (Bbm7–Eb7–Abmaj7), a backdoor dominant (Db7, the bVII7) sliding home to Ebmaj7, then the home ii–V (Fm7–Bb7) with a iii–VI–ii–V chain in the last eight. Learn to hear each ii–V's target and the tune plays itself."
+  },
+  "learning": {
+    "phase": 2,
+    "order": 10,
+    "why": "The graduation tune: three key centres, minor and major ii–Vs, a backdoor dominant, and a bright tempo. It is on every session list and everything in it appears in a hundred other standards.",
+    "concepts": ["ii–Vs into three key centres", "Backdoor dominant (bVII7 → I)", "iii–VI–ii–V chain", "Fast-tempo comping and soloing"],
+    "drills": [
+      "Comp shells at 120 BPM naming the target key of each ii–V aloud as it passes.",
+      "Loop bars 9–11 and play Ab major then the Db7's Ab melodic-minor sound into Eb.",
+      "Solo with guide tones only at 168 BPM, then add chromatic approaches.",
+      "Turn on the ii–V–I x-ray and comp only the ii–V units, resting on the I chords."
+    ],
+    "listen": ["Chet Baker — Chet Baker Sings (1954)", "Sonny Stitt — Sonny Stitt Sits In with the Oscar Peterson Trio (1959)", "Lester Young — The Jazz Giants '56"],
+    "milestones": ["Know the form and changes from memory", "Comp shells through the form without looking", "Comp drop-2 voicings with the trio at 168 BPM", "Play a chord-tone solo over the whole form", "Play the melody from memory (learn it by ear from a recording)"]
+  }
+}
