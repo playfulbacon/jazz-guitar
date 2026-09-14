@@ -480,6 +480,28 @@ input[type='range'] {
 .quality-list .group {
   margin: 0.6rem 0 0.2rem;
 }
+.quality-list > * {
+  /* the list scrolls, so children must keep their height instead of being squashed */
+  flex: none;
+}
+.quality-filter {
+  display: flex;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--bg);
+  margin-bottom: 0.4rem;
+}
+.quality-filter button {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+.quality-blurb {
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
 .quality-list button {
   text-align: left;
   padding: 0.4rem 0.7rem;
@@ -1148,7 +1170,9 @@ input[type='range'] {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .quality-list .group {
+  .quality-list .group,
+  .quality-list .quality-filter,
+  .quality-list .quality-blurb {
     width: 100%;
     margin: 0.4rem 0 0;
   }

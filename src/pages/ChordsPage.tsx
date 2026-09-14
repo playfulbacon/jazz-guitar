@@ -17,6 +17,25 @@ const GROUPS: { title: string; ids: string[] }[] = [
   { title: 'Diminished & other', ids: ['m7b5', 'm11b5', 'dim7', 'dim', 'aug', 'sus4', 'sus2'] },
 ];
 
+/**
+ * Which qualities the sidebar offers. Starter keeps a beginner on the four chords that
+ * harmonise a major scale; add more groups here as the curriculum needs them.
+ */
+const CHORD_FILTERS: { id: string; label: string; blurb: string; ids: string[] | null }[] = [
+  {
+    id: 'starter',
+    label: 'Starter',
+    blurb: 'The four diatonic seventh chords: harmonise a major scale and this is all you get. They carry most of a standard.',
+    ids: ['maj7', 'm7', '7', 'm7b5'],
+  },
+  { id: 'all', label: 'All', blurb: 'Every quality in the library, grouped by family.', ids: null },
+];
+
+/** The quality on its own, with no root attached: "maj7", "m7♭5", "6/9". */
+function qualityLabel(id: string): string {
+  return displaySymbol(parseChord('C' + QUALITIES[id].display)).slice(1) || 'maj';
+}
+
 const LEVELS: { id: VoicingLevel | 'all'; label: string; blurb: string }[] = [
   { id: 'shell', label: 'Shells', blurb: 'Root, 3rd and 7th. Everything you need to define the chord.' },
   { id: 'drop2', label: 'Drop 2 / Drop 3', blurb: 'Four-note voicings on adjacent string sets, in inversions.' },
@@ -38,7 +57,12 @@ export function ChordsPage() {
     if (paramRoot && CHROMATIC_ROOTS.includes(paramRoot)) setRootName(paramRoot);
   }, [paramQuality, paramRoot]);
   const [level, setLevel] = useState<VoicingLevel | 'all'>('all');
-  const { labelMode, set, compInstrument } = useSettings();
+  const { labelMode, set, compInstrument, chordFilter } = useSettings();
+  const filter = CHORD_FILTERS.find((f) => f.id === chordFilter) ?? CHORD_FILTERS[0];
+  // A filter never hides the chord you are looking at: picking one outside it widens to All.
+  useEffect(() => {
+    if (filter.ids && !filter.ids.includes(quality)) set({ chordFilter: 'all' });
+  }, [filter, quality, set]);
   const root = useMemo(() => parseNote(rootName), [rootName]);
   const q = QUALITIES[quality];
   const chord = useMemo(() => parseChord(chordSymbol(root, q)), [root, q]);
@@ -63,20 +87,24 @@ export function ChordsPage() {
       </div>
       <div className="chords-layout">
         <aside className="quality-list" aria-label="Chord qualities">
-          {GROUPS.map((g) => (
-            <div key={g.title} style={{ display: 'contents' }}>
-              <div className="group label">{g.title}</div>
-              {g.ids.map((id) => {
-                const count = VOICING_TEMPLATES.filter((t) => t.quality === id).length;
-                return (
-                  <button key={id} className={id === quality ? 'active' : ''} onClick={() => setQuality(id)}>
-                    <span className="chord-symbol">{displaySymbol(parseChord('C' + QUALITIES[id].display)).replace(/^C/, 'C')}</span>
-                    <span className="dim small">{count}</span>
-                  </button>
-                );
-              })}
-            </div>
-          ))}
+          <div className="seg quality-filter" role="radiogroup" aria-label="Chord group">
+            {CHORD_FILTERS.map((f) => (
+              <button key={f.id} className={f.id === filter.id ? 'active' : ''} onClick={() => set({ chordFilter: f.id })} role="radio" aria-checked={f.id === filter.id}>
+                {f.label}
+              </button>
+            ))}
+          </div>
+          <p className="dim small quality-blurb">{filter.blurb}</p>
+          {filter.ids
+            ? filter.ids.map((id) => <QualityButton key={id} id={id} active={id === quality} onPick={setQuality} />)
+            : GROUPS.map((g) => (
+                <div key={g.title} style={{ display: 'contents' }}>
+                  <div className="group label">{g.title}</div>
+                  {g.ids.map((id) => (
+                    <QualityButton key={id} id={id} active={id === quality} onPick={setQuality} />
+                  ))}
+                </div>
+              ))}
         </aside>
         <section className="stack">
           <div className="card">
@@ -169,5 +197,15 @@ export function ChordsPage() {
         </section>
       </div>
     </main>
+  );
+}
+
+function QualityButton({ id, active, onPick }: { id: string; active: boolean; onPick: (id: string) => void }) {
+  const count = VOICING_TEMPLATES.filter((t) => t.quality === id).length;
+  return (
+    <button className={active ? 'active' : ''} onClick={() => onPick(id)}>
+      <span className="chord-symbol">{qualityLabel(id)}</span>
+      <span className="dim small">{count}</span>
+    </button>
   );
 }

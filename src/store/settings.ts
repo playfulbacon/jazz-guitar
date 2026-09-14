@@ -14,6 +14,8 @@ export interface ChannelSettings {
 
 export interface SettingsState {
   voicingLevel: VoicingLevel;
+  /** which chord-library filter is active (see CHORD_FILTERS in ChordsPage) */
+  chordFilter: string;
   labelMode: LabelMode;
   showRoman: boolean;
   showXray: boolean;
@@ -41,6 +43,7 @@ export const useSettings = create<SettingsState>()(
   persist(
     (set) => ({
       voicingLevel: 'shell',
+      chordFilter: 'starter',
       labelMode: 'interval',
       showRoman: false,
       showXray: false,
