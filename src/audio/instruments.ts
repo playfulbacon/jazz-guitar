@@ -36,9 +36,12 @@ export async function ensureAudio(): Promise<Trio> {
   if (!starting) {
     starting = (async () => {
       Tone = await import('tone');
+      // "balanced" asks the browser for a larger render buffer than Tone's default
+      // "interactive" setting. A starved audio thread is what crackling sounds like, and the
+      // extra output latency costs nothing here because every event is scheduled ahead on
+      // the audio clock (the UI compensates with outputLatency()).
+      Tone.setContext(new Tone.Context({ latencyHint: 'balanced', lookAhead: 0.2 }));
       await Tone.start();
-      const ctx = Tone.getContext();
-      ctx.lookAhead = 0.05;
       trio = buildTrio();
       return trio;
     })();
@@ -54,10 +57,17 @@ export function audioNow(): number {
   return Tone ? Tone.getContext().currentTime : 0;
 }
 
+/** How far behind the audio clock the speakers actually are, so visuals can line up with sound. */
+export function outputLatency(): number {
+  if (!Tone) return 0;
+  const raw = Tone.getContext().rawContext as unknown as { outputLatency?: number; baseLatency?: number };
+  return raw.outputLatency || raw.baseLatency || 0;
+}
+
 function buildTrio(): Trio {
   const master = new Tone.Limiter(-1).toDestination();
   const compressor = new Tone.Compressor({ threshold: -18, ratio: 2.5, attack: 0.01, release: 0.2 }).connect(master);
-  const reverb = new Tone.Reverb({ decay: 1.6, preDelay: 0.02, wet: 0.16 }).connect(compressor);
+  const reverb = new Tone.Reverb({ decay: 1.1, preDelay: 0.02, wet: 0.15 }).connect(compressor);
 
   const channels: Record<InstrumentId, ToneTypes.Channel> = {
     comp: new Tone.Channel({ volume: -6 }).connect(reverb),
@@ -69,33 +79,40 @@ function buildTrio(): Trio {
   const guitarFilter = new Tone.Filter({ frequency: 2400, type: 'lowpass', rolloff: -12, Q: 0.6 }).connect(channels.comp);
   const guitar = new Tone.PolySynth({
     voice: Tone.FMSynth,
-    maxPolyphony: 16,
+    maxPolyphony: 10,
     volume: -6,
     options: {
       harmonicity: 2,
       modulationIndex: 2.2,
       oscillator: { type: 'triangle' },
       modulation: { type: 'sine' },
-      envelope: { attack: 0.004, decay: 1.4, sustain: 0.08, release: 0.5 },
-      modulationEnvelope: { attack: 0.002, decay: 0.25, sustain: 0.05, release: 0.3 },
+      envelope: { attack: 0.006, decay: 1.4, sustain: 0.06, release: 0.35 },
+      modulationEnvelope: { attack: 0.003, decay: 0.25, sustain: 0.04, release: 0.25 },
     },
   }).connect(guitarFilter);
 
-  // --- Comp piano: brighter FM with a faster modulation envelope. ---
-  const pianoFilter = new Tone.Filter({ frequency: 5200, type: 'lowpass', rolloff: -12 }).connect(channels.comp);
-  const piano = new Tone.PolySynth({
-    voice: Tone.FMSynth,
-    maxPolyphony: 16,
-    volume: -8,
-    options: {
-      harmonicity: 3.01,
-      modulationIndex: 6,
-      oscillator: { type: 'sine' },
-      modulation: { type: 'sine' },
-      envelope: { attack: 0.003, decay: 1.8, sustain: 0.05, release: 0.8 },
-      modulationEnvelope: { attack: 0.001, decay: 0.35, sustain: 0.02, release: 0.4 },
-    },
-  }).connect(pianoFilter);
+  // --- Comp piano: brighter FM, built on first use so the guitar-only case stays cheap. ---
+  let piano: ToneTypes.PolySynth<ToneTypes.FMSynth> | null = null;
+  let pianoFilter: ToneTypes.Filter | null = null;
+  const getPiano = () => {
+    if (!piano) {
+      pianoFilter = new Tone.Filter({ frequency: 5200, type: 'lowpass', rolloff: -12 }).connect(channels.comp);
+      piano = new Tone.PolySynth({
+        voice: Tone.FMSynth,
+        maxPolyphony: 10,
+        volume: -8,
+        options: {
+          harmonicity: 3.01,
+          modulationIndex: 6,
+          oscillator: { type: 'sine' },
+          modulation: { type: 'sine' },
+          envelope: { attack: 0.004, decay: 1.8, sustain: 0.04, release: 0.6 },
+          modulationEnvelope: { attack: 0.002, decay: 0.35, sustain: 0.02, release: 0.3 },
+        },
+      }).connect(pianoFilter);
+    }
+    return piano;
+  };
 
   // --- Upright bass: a filtered triangle for the body plus a sine sub. ---
   const bassFilter = new Tone.Filter({ frequency: 900, type: 'lowpass', rolloff: -24, Q: 0.8 }).connect(channels.bass);
@@ -117,38 +134,48 @@ function buildTrio(): Trio {
   const bassThump = new Tone.NoiseSynth({ volume: -22, noise: { type: 'brown' }, envelope: { attack: 0.001, decay: 0.03, sustain: 0 } }).connect(bassFilter);
 
   // --- Drums ---
-  const ride = new Tone.MetalSynth({
-    volume: -16,
-    envelope: { attack: 0.001, decay: 1.1, release: 0.3 },
-    harmonicity: 5.1,
-    modulationIndex: 18,
-    resonance: 3200,
-    octaves: 1.1,
-  }).connect(channels.drums);
-  ride.frequency.value = 320;
-  const rideBell = new Tone.MetalSynth({
+  // Tone's MetalSynth cymbals are stacked square waves: at 44.1 kHz their partials land near
+  // Nyquist and alias into a constant fizz, which is what "crackly" sounded like. Filtered
+  // noise plus a couple of sine partials gives a band-limited brush/ride that stays smooth.
+  const drumBus = new Tone.Filter({ frequency: 12000, type: 'lowpass', rolloff: -12 }).connect(channels.drums);
+
+  const rideFilter = new Tone.Filter({ frequency: 6000, type: 'bandpass', Q: 0.5 }).connect(drumBus);
+  const rideNoise = new Tone.NoiseSynth({
+    volume: -7,
+    noise: { type: 'white' },
+    envelope: { attack: 0.002, decay: 0.85, sustain: 0, release: 0.2 },
+  }).connect(rideFilter);
+  const rideTone = new Tone.Synth({
+    volume: -18,
+    oscillator: { type: 'sine' },
+    envelope: { attack: 0.001, decay: 0.3, sustain: 0, release: 0.1 },
+  }).connect(drumBus);
+  const bellFilter = new Tone.Filter({ frequency: 3400, type: 'bandpass', Q: 1.4 }).connect(drumBus);
+  const bellNoise = new Tone.NoiseSynth({
+    volume: -11,
+    noise: { type: 'white' },
+    envelope: { attack: 0.001, decay: 0.55, sustain: 0, release: 0.15 },
+  }).connect(bellFilter);
+  const bellTone = new Tone.Synth({
     volume: -14,
-    envelope: { attack: 0.001, decay: 0.7, release: 0.2 },
-    harmonicity: 3.3,
-    modulationIndex: 12,
-    resonance: 5200,
-    octaves: 0.6,
-  }).connect(channels.drums);
-  rideBell.frequency.value = 620;
-  const hatFilter = new Tone.Filter({ frequency: 7000, type: 'highpass' }).connect(channels.drums);
-  const hat = new Tone.NoiseSynth({ volume: -14, noise: { type: 'white' }, envelope: { attack: 0.001, decay: 0.06, sustain: 0 } }).connect(hatFilter);
-  const kick = new Tone.MembraneSynth({ volume: -10, pitchDecay: 0.04, octaves: 5, envelope: { attack: 0.001, decay: 0.28, sustain: 0, release: 0.1 } }).connect(channels.drums);
-  const snareFilter = new Tone.Filter({ frequency: 1800, type: 'bandpass', Q: 0.7 }).connect(channels.drums);
-  const snare = new Tone.NoiseSynth({ volume: -12, noise: { type: 'pink' }, envelope: { attack: 0.004, decay: 0.16, sustain: 0 } }).connect(snareFilter);
-  const brushFilter = new Tone.Filter({ frequency: 2600, type: 'bandpass', Q: 0.5 }).connect(channels.drums);
-  const brush = new Tone.NoiseSynth({ volume: -18, noise: { type: 'pink' }, envelope: { attack: 0.14, decay: 0.28, sustain: 0 } }).connect(brushFilter);
-  const rim = new Tone.MembraneSynth({ volume: -12, pitchDecay: 0.005, octaves: 1.5, envelope: { attack: 0.001, decay: 0.045, sustain: 0 } }).connect(channels.drums);
-  const shakerFilter = new Tone.Filter({ frequency: 6000, type: 'bandpass', Q: 1 }).connect(channels.drums);
-  const shaker = new Tone.NoiseSynth({ volume: -18, noise: { type: 'white' }, envelope: { attack: 0.01, decay: 0.07, sustain: 0 } }).connect(shakerFilter);
-  const click = new Tone.MembraneSynth({ volume: -8, pitchDecay: 0.002, octaves: 1, envelope: { attack: 0.001, decay: 0.03, sustain: 0 } }).connect(channels.drums);
+    oscillator: { type: 'sine' },
+    envelope: { attack: 0.001, decay: 0.55, sustain: 0, release: 0.15 },
+  }).connect(drumBus);
+
+  const hatFilter = new Tone.Filter({ frequency: 8200, type: 'bandpass', Q: 1.1 }).connect(drumBus);
+  const hat = new Tone.NoiseSynth({ volume: -9, noise: { type: 'white' }, envelope: { attack: 0.001, decay: 0.055, sustain: 0 } }).connect(hatFilter);
+  const kick = new Tone.MembraneSynth({ volume: -9, pitchDecay: 0.04, octaves: 5, envelope: { attack: 0.001, decay: 0.28, sustain: 0, release: 0.1 } }).connect(drumBus);
+  const snareFilter = new Tone.Filter({ frequency: 1700, type: 'bandpass', Q: 0.6 }).connect(drumBus);
+  const snare = new Tone.NoiseSynth({ volume: -7, noise: { type: 'pink' }, envelope: { attack: 0.004, decay: 0.16, sustain: 0 } }).connect(snareFilter);
+  const brushFilter = new Tone.Filter({ frequency: 2400, type: 'bandpass', Q: 0.5 }).connect(drumBus);
+  const brush = new Tone.NoiseSynth({ volume: -11, noise: { type: 'pink' }, envelope: { attack: 0.14, decay: 0.28, sustain: 0 } }).connect(brushFilter);
+  const rim = new Tone.MembraneSynth({ volume: -9, pitchDecay: 0.005, octaves: 1.5, envelope: { attack: 0.001, decay: 0.045, sustain: 0 } }).connect(drumBus);
+  const shakerFilter = new Tone.Filter({ frequency: 5200, type: 'bandpass', Q: 1 }).connect(drumBus);
+  const shaker = new Tone.NoiseSynth({ volume: -13, noise: { type: 'white' }, envelope: { attack: 0.01, decay: 0.07, sustain: 0 } }).connect(shakerFilter);
+  const click = new Tone.MembraneSynth({ volume: -8, pitchDecay: 0.002, octaves: 1, envelope: { attack: 0.001, decay: 0.03, sustain: 0 } }).connect(drumBus);
 
   const strum: Trio['strum'] = (midis, time, velocity, duration, instrument, spreadMs = 14) => {
-    const synth = instrument === 'piano' ? piano : guitar;
+    const synth = instrument === 'piano' ? getPiano() : guitar;
     const spread = (instrument === 'piano' ? 4 : spreadMs) / 1000;
     midis.forEach((m, i) => {
       const t = time + i * spread;
@@ -169,10 +196,12 @@ function buildTrio(): Trio {
     const v = Math.min(1, Math.max(0.02, velocity));
     switch (hit) {
       case 'ride':
-        ride.triggerAttackRelease(320, 0.4, time, v);
+        rideNoise.triggerAttackRelease(0.5, time, v);
+        rideTone.triggerAttackRelease(430, 0.16, time, v * 0.5);
         break;
       case 'rideBell':
-        rideBell.triggerAttackRelease(620, 0.3, time, v);
+        bellNoise.triggerAttackRelease(0.4, time, v * 0.8);
+        bellTone.triggerAttackRelease(790, 0.4, time, v * 0.55);
         break;
       case 'hat':
         hat.triggerAttackRelease(0.05, time, v);
@@ -201,9 +230,10 @@ function buildTrio(): Trio {
     }
   };
 
-  const nodes: { dispose(): void }[] = [
-    guitar, piano, guitarFilter, pianoFilter, bassBody, bassSub, bassThump, bassFilter, ride, rideBell, hat, hatFilter, kick,
-    snare, snareFilter, brush, brushFilter, rim, shaker, shakerFilter, click, reverb, compressor, master, ...Object.values(channels),
+  const nodes: ({ dispose(): void } | null)[] = [
+    guitar, guitarFilter, bassBody, bassSub, bassThump, bassFilter, drumBus, rideNoise, rideTone, rideFilter, bellNoise, bellTone,
+    bellFilter, hat, hatFilter, kick, snare, snareFilter, brush, brushFilter, rim, shaker, shakerFilter, click, reverb, compressor,
+    master, ...Object.values(channels),
   ];
 
   return {
@@ -213,10 +243,10 @@ function buildTrio(): Trio {
     channel: (id) => channels[id],
     releaseAll: (time) => {
       guitar.releaseAll(time);
-      piano.releaseAll(time);
+      piano?.releaseAll(time);
       bassBody.triggerRelease(time);
       bassSub.triggerRelease(time);
     },
-    dispose: () => nodes.forEach((n) => n.dispose()),
+    dispose: () => [...nodes, piano, pianoFilter].forEach((n) => n?.dispose()),
   };
 }

@@ -54,7 +54,15 @@ export class DrawQueue<T> {
   private items: { time: number; payload: T }[] = [];
   private raf: number | null = null;
 
-  constructor(private readonly now: () => number, private readonly onDraw: (payload: T) => void) {}
+  /**
+   * `latency` is the delay between the audio clock and the speakers. Drawing is held back by
+   * that much so the highlighted bar lands with the sound rather than ahead of it.
+   */
+  constructor(
+    private readonly now: () => number,
+    private readonly onDraw: (payload: T) => void,
+    private readonly latency: () => number = () => 0,
+  ) {}
 
   push(time: number, payload: T): void {
     this.items.push({ time, payload });
@@ -68,7 +76,7 @@ export class DrawQueue<T> {
   }
 
   private loop = (): void => {
-    const t = this.now();
+    const t = this.now() - this.latency();
     let last: T | undefined;
     while (this.items.length && this.items[0].time <= t) last = this.items.shift()!.payload;
     if (last !== undefined) this.onDraw(last);

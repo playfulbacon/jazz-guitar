@@ -9,7 +9,7 @@ import { bassLineForSlot, type BassSlot, type BassFeel } from '../theory/bass';
 import { pitchClass } from '../theory/notes';
 import { seededRng, type Rng } from '../theory/random';
 import { BeatClock, DrawQueue } from './scheduler';
-import { ensureAudio, audioNow, type Trio, type CompInstrument, type InstrumentId } from './instruments';
+import { ensureAudio, audioNow, outputLatency, type Trio, type CompInstrument, type InstrumentId } from './instruments';
 import { chooseCompPattern, drumBar, countInBar, swingRatio, offsetSeconds } from './patterns';
 import { chooseVoicing, initialComperState, type ComperState } from './comper';
 
@@ -91,7 +91,7 @@ export class TrioEngine {
 
   constructor() {
     this.clock = new BeatClock(audioNow, (b) => this.onBeat(b.time, b.secondsPerBeat));
-    this.draw = new DrawQueue<Position>(audioNow, (p) => this.callbacks.onPosition?.(p));
+    this.draw = new DrawQueue<Position>(audioNow, (p) => this.callbacks.onPosition?.(p), outputLatency);
   }
 
   get playing(): boolean {
